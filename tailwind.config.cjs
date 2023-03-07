@@ -2,9 +2,17 @@
 const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        logo: ["Tilt Warp"],
+        header: ["Inter"],
+      },
+    },
   },
   plugins: [],
+  variants: {
+    display: ["group-hover"],
+  },
 };
 
 module.exports = config;
