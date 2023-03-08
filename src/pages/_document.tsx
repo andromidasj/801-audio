@@ -18,6 +18,7 @@ export default class _Document extends Document {
           />
         </Head>
         <body>
+          {/* <body className="bg-gradient-to-r from-cyan-500 to-blue-500"> */}
           <Main />
           <NextScript />
         </body>

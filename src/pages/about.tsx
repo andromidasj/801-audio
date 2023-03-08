@@ -15,11 +15,11 @@ export default function About() {
         <h1 className="font-header text-6xl">{"Hi, I'm Parker!"}</h1>
       </div>
 
-      <IconMusic size={32} className="mx-auto mt-12" />
+      <IconMusic size={32} className="mx-auto my-12" />
 
-      <div className="m-auto mt-16 max-w-2xl">
+      <div className="m-auto max-w-2xl">
         <h1 className="font-header text-4xl">About Me</h1>
-        <div className="flex flex-col gap-4 p-4">
+        <div className="flex flex-col gap-4 p-4 text-lg">
           <p>
             Irure ut exercitation voluptate sunt cillum dolor voluptate elit ex
             deserunt est reprehenderit cillum incididunt. Amet ullamco et
