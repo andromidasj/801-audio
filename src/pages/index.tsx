@@ -10,15 +10,6 @@ import parker from "../../public/assets/parker/vertical-smile-cropped.jpeg";
 const Home: NextPage = () => {
   const musicRef = useRef<null | HTMLDivElement>(null);
 
-  const music = [
-    {
-      // image: bed,
-      title: "Sleeper - Josh Andromidas",
-      audio: "/Sleeper.wav",
-      role: "Vocals recording, Mixing & Mastering",
-    },
-  ];
-
   return (
     <>
       <Head>
@@ -37,7 +28,7 @@ const Home: NextPage = () => {
                 Utah Valley University
               </span>
               {"'s Digital Audio program, I specialize in "}
-              audio production, engineering, and sound design From music
+              audio production, engineering, and sound design. From music
               production to podcast editing, I bring a passion for creativity
               and attention to detail to all my projects. Take a look around and
               explore my work, and feel free to reach out if you have any
@@ -71,6 +62,8 @@ const Home: NextPage = () => {
 
         <div ref={musicRef} className="h-[3000px]">
           <MusicSection />
+          {/* <hr className="my-12 mx-16" />
+          <InvolvementSection /> */}
         </div>
       </div>
     </>
