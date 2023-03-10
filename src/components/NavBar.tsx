@@ -17,7 +17,7 @@ export default function NavBar() {
     "decoration-blue-400 decoration-4 underline-offset-4 hover:underline";
 
   return (
-    <nav className="sticky top-0 z-50 m-auto flex items-center justify-between bg-white/50 px-8 py-4 font-semibold backdrop-blur-md">
+    <nav className="sticky top-0 z-50 flex items-center justify-between bg-blue-50/50 px-8 py-4 font-semibold backdrop-blur-md">
       <h1 className="font-logo text-2xl">
         <Link href={HOME_PATH}>Parker Holt</Link>
       </h1>

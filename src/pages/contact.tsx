@@ -1,5 +1,6 @@
 import { IconAt, IconPhone } from "@tabler/icons-react";
 import Image from "next/image";
+import parker from "../../public/assets/parker/contact.png";
 
 export default function Contact() {
   const PHONE = "(801) 560-0983";
@@ -8,10 +9,8 @@ export default function Contact() {
   return (
     <div className="mt-8 flex justify-evenly">
       <Image
-        src="/parker-contact.png"
+        src={parker}
         alt="Parker Holt"
-        width={500}
-        height={500}
         className="rounded-lg drop-shadow-2xl"
       />
       <div className="flex flex-col gap-16 p-8">

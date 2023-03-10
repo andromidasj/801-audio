@@ -5,9 +5,9 @@ import "~/styles/globals.css";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <div className="m-auto max-w-7xl">
+    <div className="m-auto">
       <NavBar />
-      <div className="p-8">
+      <div className="m-auto max-w-7xl p-8">
         <Component {...pageProps} />
       </div>
     </div>

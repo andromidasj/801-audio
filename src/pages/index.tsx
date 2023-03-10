@@ -34,18 +34,18 @@ const Home: NextPage = () => {
               explore my work, and feel free to reach out if you have any
               questions or would like to collaborate on a project!
             </p>
-            <div className="flex gap-8 font-bold">
+            <div className="flex gap-8 font-semibold">
               <button
-                className="flex items-center justify-between gap-2 rounded-sm bg-yellow-300 p-4 px-6 hover:bg-yellow-500"
+                className="flex w-44 items-center justify-center gap-2 rounded-sm bg-yellow-300 p-4 px-6 uppercase drop-shadow hover:bg-yellow-500 active:scale-95"
                 onClick={() => musicRef.current?.scrollIntoView()}
               >
-                See My Portfolio <IconArrowDown />
+                Portfolio <IconArrowDown size={18} />
               </button>
               <Link
                 href="/contact"
-                className="rounded-sm border-2 border-stone-200 p-4 px-6 hover:bg-stone-200"
+                className="w-40 rounded-sm bg-white p-4 px-6 text-center uppercase drop-shadow hover:bg-stone-200 active:scale-95"
               >
-                Contact Me
+                Contact
               </Link>
             </div>
           </div>
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
 
         <hr className="m-16" />
 
-        <div ref={musicRef} className="h-[3000px]">
+        <div ref={musicRef} className="">
           <MusicSection />
           {/* <hr className="my-12 mx-16" />
           <InvolvementSection /> */}
