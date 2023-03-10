@@ -57,15 +57,15 @@ export default function MusicSection() {
               />
             </div>
             <div className="flex w-full flex-col justify-between p-4">
-              <div>
-                <h3 className="text-lg font-bold">
-                  {s.title} • {s.artist}
-                </h3>
-                <h4 className="italic">
-                  Involvement: {s.involvement.join(" • ")}
-                </h4>
-              </div>
-              <audio controls src={s.audio} className="w-full" />
+              {/* <div> */}
+              <h3 className="text-lg font-bold">
+                {s.title} • {s.artist}
+              </h3>
+              <h4 className="italic">
+                Involvement: {s.involvement.join(" • ")}
+              </h4>
+              {/* </div> */}
+              <audio controls src={s.audio} className="w-full rounded-full" />
             </div>
           </div>
         ))}
