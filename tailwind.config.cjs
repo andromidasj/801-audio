@@ -5,7 +5,7 @@ const config = {
     extend: {
       fontFamily: {
         logo: ["Tilt Warp"],
-        header: ["Inter"],
+        header: ["Anton"],
       },
     },
   },

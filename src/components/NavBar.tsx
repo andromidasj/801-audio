@@ -4,12 +4,17 @@ import { useRouter } from "next/router";
 const HOME_PATH = "/";
 const ABOUT_PATH = "/about";
 const CONTACT_PATH = "/contact";
-export default function NavBar() {
+
+type Props = {
+  scrolled: boolean;
+};
+
+export default function NavBar({ scrolled }: Props) {
   const router = useRouter();
 
   function underlineCurrentPage(page: string) {
     return router.pathname === page
-      ? "underline decoration-blue-600 decoration-4 underline-offset-4"
+      ? "underline decoration-white decoration-2 underline-offset-4"
       : "";
   }
 
@@ -17,9 +22,13 @@ export default function NavBar() {
     "decoration-blue-400 decoration-4 underline-offset-4 hover:underline";
 
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between bg-blue-50/50 px-8 py-4 font-semibold backdrop-blur-md">
+    <nav
+      className={`sticky top-0 z-50 flex w-full items-center justify-between ${
+        scrolled ? "bg-black" : "bg-transparent"
+      } px-8 py-4 font-semibold text-white transition-colors duration-300`}
+    >
       <h1 className="font-logo text-2xl">
-        <Link href={HOME_PATH}>Parker Holt</Link>
+        <Link href={HOME_PATH}>801 AUDIO</Link>
       </h1>
 
       <ul className="flex justify-end gap-8">
