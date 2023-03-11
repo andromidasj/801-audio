@@ -1,3 +1,6 @@
+import { involvementData } from "~/involvementData";
+import ImageCarousel from "./ImageCarousel";
+
 export default function InvolvementSection() {
   return (
     <>
@@ -5,7 +8,13 @@ export default function InvolvementSection() {
         Involvement
       </h1>
 
-      <div className="flex h-96 flex-col gap-8">bababooey</div>
+      <div className="m-auto flex max-w-7xl flex-col gap-8">
+        {involvementData.map((set, i) => (
+          <div key={i} className="rounded bg-white p-8 drop-shadow-lg">
+            <ImageCarousel data={set} />
+          </div>
+        ))}
+      </div>
     </>
   );
 }

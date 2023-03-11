@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Parker Holt</title>
+        <title>801 Audio</title>
         <meta name="description" content="Parker Holt's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           </button>
           <Link
             href="/contact"
-            className="w-40 rounded-sm bg-stone-50 p-4 px-6 text-center uppercase drop-shadow hover:bg-stone-200 active:scale-95"
+            className="w-40 rounded-sm bg-slate-50 p-4 px-6 text-center uppercase drop-shadow hover:bg-slate-200 active:scale-95"
           >
             Contact
           </Link>
