@@ -7,6 +7,9 @@ const config = {
         logo: ["Tilt Warp"],
         header: ["Anton"],
       },
+      backgroundImage: {
+        hero1: "url('/assets/bg-cropped.jpeg')",
+      },
     },
   },
   plugins: [],

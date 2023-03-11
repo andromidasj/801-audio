@@ -3,6 +3,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import InvolvementSection from "~/components/InvolvementSection";
 import MusicSection from "~/components/MusicSection";
 import NavBar from "~/components/NavBar";
 
@@ -10,10 +11,20 @@ const Home: NextPage = () => {
   const musicRef = useRef<null | HTMLDivElement>(null);
   const [scrolled, setScrolled] = useState(false);
 
+  // if (typeof window !== "undefined") {
+  //   // browser code
+  //   console.log(window?.scrollY);
+  // }
+
   useEffect(() => {
-    addEventListener("scroll", () => {
+    function setScrollVal() {
       setScrolled(window.scrollY > 0);
-    });
+    }
+    addEventListener("scroll", setScrollVal);
+
+    return () => {
+      removeEventListener("scroll", setScrollVal);
+    };
   }, []);
 
   return (
@@ -26,34 +37,36 @@ const Home: NextPage = () => {
 
       <NavBar scrolled={scrolled} />
 
-      <div className="relative mt-[-64px] flex h-[600px] flex-col items-center justify-evenly bg-[url('/assets/bg.jpg')] bg-left-bottom p-16">
-        <h1 className="pb-40 text-center font-header text-6xl uppercase text-white drop-shadow-md">
-          Where <span className="text-blue-300">quality</span> meets
-          <span className="text-green-400"> creativity</span>
+      <div className="relative mt-[-64px] flex h-[800px] flex-col items-center justify-between gap-12 bg-hero1 bg-contain bg-fixed bg-top p-40">
+        <h1 className="font-white font-header text-[140px] text-white">
+          801 AUDIO
         </h1>
+
+        <h2 className="text-center font-header text-6xl uppercase text-white drop-shadow-sm">
+          Where <span className="text-green-300">quality</span> meets
+          <span className="text-green-300"> creativity</span>
+        </h2>
 
         <div className="flex gap-8 font-semibold">
           <button
-            className="flex w-44 items-center justify-center gap-2 rounded-sm bg-yellow-300 p-4 px-6 uppercase drop-shadow hover:bg-yellow-500 active:scale-95"
+            className="flex w-44 items-center justify-center gap-2 rounded-sm bg-green-300 p-4 px-6 uppercase text-black drop-shadow hover:bg-green-400 active:scale-95"
             onClick={() => musicRef.current?.scrollIntoView()}
           >
             Portfolio <IconArrowDown size={18} />
           </button>
           <Link
             href="/contact"
-            className="w-40 rounded-sm bg-white p-4 px-6 text-center uppercase drop-shadow hover:bg-stone-200 active:scale-95"
+            className="w-40 rounded-sm bg-stone-50 p-4 px-6 text-center uppercase drop-shadow hover:bg-stone-200 active:scale-95"
           >
             Contact
           </Link>
         </div>
       </div>
 
-      <hr className="m-16" />
-
-      <div ref={musicRef} className="m-auto max-w-7xl">
+      <div ref={musicRef} className="m-auto scroll-m-16 bg-slate-100 p-16">
         <MusicSection />
-        {/* <hr className="my-12 mx-16" />
-          <InvolvementSection /> */}
+        <hr className="m-16" />
+        <InvolvementSection />
       </div>
     </>
   );

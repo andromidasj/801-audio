@@ -17,8 +17,7 @@ export default class _Document extends Document {
             rel="stylesheet"
           />
         </Head>
-        {/* <body className="bg-gradient-to-b from-blue-50 to-slate-50 bg-fixed"> */}
-        <body className="">
+        <body>
           <Main />
           <NextScript />
         </body>

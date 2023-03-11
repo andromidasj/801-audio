@@ -14,24 +14,24 @@ export default function NavBar({ scrolled }: Props) {
 
   function underlineCurrentPage(page: string) {
     return router.pathname === page
-      ? "underline decoration-white decoration-2 underline-offset-4"
+      ? "underline decoration-white decoration-4 underline-offset-4"
       : "";
   }
 
   const hoverUnderline =
-    "decoration-blue-400 decoration-4 underline-offset-4 hover:underline";
+    "decoration-green-500 decoration-4 underline-offset-4 hover:underline";
 
   return (
     <nav
       className={`sticky top-0 z-50 flex w-full items-center justify-between ${
-        scrolled ? "bg-black" : "bg-transparent"
+        scrolled ? "bg-black" : ""
       } px-8 py-4 font-semibold text-white transition-colors duration-300`}
     >
       <h1 className="font-logo text-2xl">
         <Link href={HOME_PATH}>801 AUDIO</Link>
       </h1>
 
-      <ul className="flex justify-end gap-8">
+      <ul className="flex justify-end gap-8 uppercase">
         <li>
           <Link
             className={underlineCurrentPage(HOME_PATH) || hoverUnderline}
