@@ -2,30 +2,12 @@ import { IconArrowDown } from "@tabler/icons-react";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import InvolvementSection from "~/components/InvolvementSection";
 import MusicSection from "~/components/MusicSection";
-import NavBar from "~/components/NavBar";
 
 const Home: NextPage = () => {
   const musicRef = useRef<null | HTMLDivElement>(null);
-  const [scrolled, setScrolled] = useState(false);
-
-  // if (typeof window !== "undefined") {
-  //   // browser code
-  //   console.log(window?.scrollY);
-  // }
-
-  useEffect(() => {
-    function setScrollVal() {
-      setScrolled(window.scrollY > 0);
-    }
-    addEventListener("scroll", setScrollVal);
-
-    return () => {
-      removeEventListener("scroll", setScrollVal);
-    };
-  }, []);
 
   return (
     <>
@@ -34,8 +16,6 @@ const Home: NextPage = () => {
         <meta name="description" content="Parker Holt's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <NavBar scrolled={scrolled} />
 
       <div className="relative mt-[-64px] flex h-[800px] flex-col items-center justify-between gap-12 bg-hero1 bg-contain bg-fixed bg-top p-40">
         <h1 className="font-white font-header text-[140px] text-white">
