@@ -54,6 +54,7 @@ export default function MusicSection() {
                 alt="Sleeper"
                 className="rounded-tl rounded-bl object-cover"
                 fill
+                priority
               />
             </div>
             <div className="flex w-full flex-col justify-between p-4">

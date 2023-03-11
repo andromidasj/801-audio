@@ -1,6 +1,6 @@
+import { useWindowScroll } from "@mantine/hooks";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 
 const HOME_PATH = "/";
 const ABOUT_PATH = "/about";
@@ -8,25 +8,7 @@ const CONTACT_PATH = "/contact";
 
 export default function NavBar() {
   const router = useRouter();
-  const [scrolled, setScrolled] = useState(false);
-
-  // if (typeof window !== "undefined") {
-  //   // browser code
-  //   console.log(window?.scrollY);
-  // }
-
-  useEffect(() => {
-    function setScrollVal() {
-      setScrolled(window.scrollY > 0);
-    }
-    if (router.pathname === HOME_PATH) {
-      addEventListener("scroll", setScrollVal);
-
-      return () => {
-        removeEventListener("scroll", setScrollVal);
-      };
-    }
-  }, [router.pathname]);
+  const [scrolled] = useWindowScroll();
 
   function underlineCurrentPage(page: string) {
     return router.pathname === page
@@ -40,7 +22,7 @@ export default function NavBar() {
   return (
     <nav
       className={`sticky top-0 z-50 flex w-full items-center justify-between ${
-        scrolled || router.pathname !== HOME_PATH ? "bg-black" : ""
+        scrolled.y || router.pathname !== HOME_PATH ? "bg-black" : ""
       } px-8 py-4 font-semibold text-white transition-colors duration-300`}
     >
       <h1 className="font-logo text-2xl">
