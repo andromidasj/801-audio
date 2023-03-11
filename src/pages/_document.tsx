@@ -13,12 +13,11 @@ export default class _Document extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Tilt+Warp&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@700&family=Tilt+Warp&display=swap"
             rel="stylesheet"
           />
         </Head>
-        <body className="bg-gradient-to-b from-blue-50 to-slate-50 bg-fixed">
-          {/* <body className="bg-[url('/assets/bg.jpg')] bg-fixed bg-blend-darken"> */}
+        <body>
           <Main />
           <NextScript />
         </body>

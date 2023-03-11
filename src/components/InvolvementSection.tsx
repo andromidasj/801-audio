@@ -1,9 +1,11 @@
 export default function InvolvementSection() {
   return (
     <>
-      <h1 className="text-4xl font-bold">Involvement</h1>
-      <br />
-      <div className="grid grid-cols-2 gap-8"></div>
+      <h1 className="my-16 text-center font-header text-4xl uppercase">
+        Involvement
+      </h1>
+
+      <div className="flex h-96 flex-col gap-8">bababooey</div>
     </>
   );
 }

@@ -5,7 +5,10 @@ const config = {
     extend: {
       fontFamily: {
         logo: ["Tilt Warp"],
-        header: ["Inter"],
+        header: ["Anton"],
+      },
+      backgroundImage: {
+        hero1: "url('/assets/bg-cropped.jpeg')",
       },
     },
   },

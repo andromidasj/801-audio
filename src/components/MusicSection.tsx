@@ -38,15 +38,17 @@ const songs = [
 export default function MusicSection() {
   return (
     <>
-      <h1 className="text-4xl font-bold">Music</h1>
-      <br />
+      <h1 className="mb-10 text-center font-header text-4xl uppercase">
+        Music
+      </h1>
+
       <div className="grid grid-cols-2 gap-8">
         {songs.map((s) => (
           <div
             key={s.title}
-            className="flex h-40 w-full min-w-[500px] rounded bg-white drop-shadow-lg"
+            className="flex h-40 w-full min-w-[500px] rounded bg-white drop-shadow-lg transition-transform hover:scale-[101%]"
           >
-            <div className="relative h-full w-48">
+            <div className="relative h-full w-48 border-2">
               <Image
                 src={s.image}
                 alt="Sleeper"
