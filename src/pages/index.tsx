@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Parker Holt</title>
+        <title>801 Audio</title>
         <meta name="description" content="Parker Holt's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
