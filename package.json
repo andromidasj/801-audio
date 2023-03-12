@@ -15,9 +15,12 @@
     "@mantine/hooks": "6.0.0",
     "@mantine/next": "6.0.0",
     "@tabler/icons-react": "2.7.0",
+    "@types/react-image-gallery": "1.2.0",
     "next": "^13.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-image-gallery": "1.2.11",
+    "react-responsive-carousel": "3.2.23",
     "sharp": "0.31.3",
     "tailwindcss-hero-patterns": "0.1.0",
     "zod": "^3.20.6"

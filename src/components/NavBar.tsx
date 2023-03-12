@@ -22,7 +22,9 @@ export default function NavBar() {
   return (
     <nav
       className={`sticky top-0 z-50 flex w-full items-center justify-between ${
-        scrolled.y || router.pathname !== HOME_PATH ? "bg-black" : ""
+        scrolled.y || router.pathname !== HOME_PATH
+          ? "bg-slate-900/50 backdrop-blur"
+          : ""
       } px-8 py-4 font-semibold text-white transition-colors duration-300`}
     >
       <h1 className="font-logo text-2xl">
