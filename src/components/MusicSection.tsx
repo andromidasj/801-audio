@@ -38,7 +38,7 @@ const songs = [
 export default function MusicSection() {
   return (
     <>
-      <h1 className="mb-10 text-center font-header text-4xl uppercase">
+      <h1 className="mb-10 text-center font-header text-4xl uppercase text-white">
         Music
       </h1>
 
@@ -46,9 +46,9 @@ export default function MusicSection() {
         {songs.map((s) => (
           <div
             key={s.title}
-            className="flex h-40 w-full min-w-[500px] rounded bg-white drop-shadow-lg transition-transform hover:scale-[101%]"
+            className="flex h-40 w-full min-w-[500px] rounded bg-slate-100 transition-transform hover:scale-[101%]"
           >
-            <div className="relative h-full w-48 border-2">
+            <div className="relative h-full w-48">
               <Image
                 src={s.image}
                 alt="Sleeper"
@@ -58,14 +58,12 @@ export default function MusicSection() {
               />
             </div>
             <div className="flex w-full flex-col justify-between p-4">
-              {/* <div> */}
               <h3 className="text-lg font-bold">
                 {s.title} • {s.artist}
               </h3>
               <h4 className="italic">
                 Involvement: {s.involvement.join(" • ")}
               </h4>
-              {/* </div> */}
               <audio controls src={s.audio} className="w-full rounded-full" />
             </div>
           </div>

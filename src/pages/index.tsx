@@ -43,7 +43,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div ref={musicRef} className="m-auto scroll-m-16 bg-slate-100 p-16">
+      <div ref={musicRef} className="m-auto scroll-m-16 bg-slate-900 p-16">
         <MusicSection />
         <hr className="m-16" />
         <InvolvementSection />
