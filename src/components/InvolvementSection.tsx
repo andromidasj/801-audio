@@ -8,7 +8,7 @@ export default function InvolvementSection() {
         Involvement
       </h1>
 
-      <div className="m-auto flex max-w-7xl flex-col gap-8">
+      <div className="m-auto grid max-w-7xl grid-cols-3 gap-8">
         {involvementData.map((set, i) => (
           <div key={i} className="rounded bg-white p-8 drop-shadow-lg">
             <ImageCarousel data={set} />
