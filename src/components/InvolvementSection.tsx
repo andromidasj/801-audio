@@ -24,13 +24,15 @@ export default function InvolvementSection() {
           //   />
           // </div> */}
 
-      <div className="m-auto grid max-w-7xl grid-cols-2 gap-8">
+      <div className="m-auto grid max-w-7xl grid-cols-3 gap-8">
         {involvementData.map((set) => (
           <div
             key={set.title}
-            className="flex flex-col gap-4 rounded bg-slate-700 p-4 text-white"
+            className="flex flex-col gap-4 rounded-lg bg-slate-700 p-6 text-white"
           >
-            <h3 className="font-xl text-center">{set.title}</h3>
+            <h3 className="text-center font-logo text-2xl uppercase">
+              {set.title}
+            </h3>
 
             <Carousel
               infiniteLoop
