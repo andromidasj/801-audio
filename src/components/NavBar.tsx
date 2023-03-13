@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 const HOME_PATH = "/";
 const ABOUT_PATH = "/about";
 const CONTACT_PATH = "/contact";
+const PORTFOLIO_PATH = "/portfolio";
 
 export default function NavBar() {
   const router = useRouter();
@@ -38,6 +39,15 @@ export default function NavBar() {
             href={HOME_PATH}
           >
             Home
+          </Link>
+        </li>
+
+        <li>
+          <Link
+            className={underlineCurrentPage(PORTFOLIO_PATH) || hoverUnderline}
+            href={PORTFOLIO_PATH}
+          >
+            Portfolio
           </Link>
         </li>
 

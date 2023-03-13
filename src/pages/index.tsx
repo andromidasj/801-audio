@@ -4,7 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
 import MusicSection from "~/components/MusicSection";
-import Involvement from "./involvement";
+import Portfolio from "./portfolio";
 
 const Home: NextPage = () => {
   const musicRef = useRef<null | HTMLDivElement>(null);
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
       <div ref={musicRef} className="m-auto bg-slate-900 p-16">
         <MusicSection />
         <br />
-        <Involvement />
+        <Portfolio />
       </div>
     </>
   );
