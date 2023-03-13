@@ -16,23 +16,24 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="relative flex h-[800px] flex-col items-center justify-between gap-12 bg-hero-mixer bg-cover bg-fixed bg-bottom p-40">
-        <h1 className="font-white font-logo text-[140px] text-white">
+      <div className="relative flex h-[800px] flex-col items-center justify-between gap-12 bg-hero-mixer bg-cover bg-fixed bg-bottom px-4 py-40 sm:p-40">
+        <h1 className="font-white text-center font-logo text-[100px] leading-none text-white sm:text-[140px]">
           801 AUDIO
         </h1>
 
-        <h2 className="text-center font-header text-6xl uppercase text-white drop-shadow-sm">
+        <h2 className="text-center font-header text-5xl uppercase text-white drop-shadow-sm sm:text-6xl">
           Where <span className="text-green-300">quality</span> meets
           <span className="text-green-300"> creativity</span>
         </h2>
 
-        <div className="flex gap-8 font-semibold">
+        <div className="flex w-full justify-evenly font-semibold sm:justify-center sm:gap-8">
           <button
             className="flex w-44 items-center justify-center gap-2 rounded-sm bg-green-300 p-4 px-6 uppercase text-black drop-shadow hover:bg-green-400 active:scale-95"
             onClick={() => musicRef.current?.scrollIntoView()}
           >
             Portfolio <IconArrowDown size={18} />
           </button>
+
           <Link
             href="/contact"
             className="w-40 rounded-sm bg-slate-50 p-4 px-6 text-center uppercase drop-shadow hover:bg-slate-200 active:scale-95"

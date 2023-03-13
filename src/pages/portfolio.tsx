@@ -21,7 +21,7 @@ export default function Portfolio() {
       <div className="bg-black">
         {/* Music */}
         <div className="">
-          <div className="relative h-96 bg-fixed">
+          <div className="relative h-96">
             <Image
               priority
               src={musicBg}
