@@ -1,4 +1,5 @@
 import { useWindowScroll } from "@mantine/hooks";
+import { IconMenu } from "@tabler/icons-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -32,7 +33,11 @@ export default function NavBar() {
         <Link href={HOME_PATH}>801 AUDIO</Link>
       </h1>
 
-      <ul className="flex justify-end gap-8 uppercase">
+      <button className="sm:hidden">
+        <IconMenu />
+      </button>
+
+      <ul className="hidden justify-end gap-8 uppercase sm:flex">
         <li>
           <Link
             className={underlineCurrentPage(HOME_PATH) || hoverUnderline}

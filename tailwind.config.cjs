@@ -12,9 +12,6 @@ const config = {
         "hero-music": "url('/assets/hero-music.jpg')",
         "hero-cheer": "url('/assets/hero-cheer.jpeg')",
       },
-      colors: {
-        primary: "#2775AD",
-      },
     },
   },
   plugins: [],
