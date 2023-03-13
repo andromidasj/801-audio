@@ -12,7 +12,9 @@ export default function MusicSection({ n }: { n?: number }) {
           className="m-auto flex w-full flex-col rounded bg-[#F1F3F4] transition-transform sm:h-44 sm:flex-row sm:hover:scale-[101%]"
         >
           <Image
-            src={MUSIC_FOLDER + s.title + ".jpg"}
+            src={
+              MUSIC_FOLDER + s.title.toLowerCase().replaceAll(" ", "-") + ".jpg"
+            }
             alt={s.title}
             className="w-full rounded-t sm:h-44 sm:w-44 sm:rounded-none sm:rounded-l"
             height={160}
