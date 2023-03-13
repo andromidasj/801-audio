@@ -9,6 +9,8 @@ const config = {
       },
       backgroundImage: {
         hero1: "url('/assets/bg-cropped.jpeg')",
+        "hero-music": "url('/assets/hero-music.jpg')",
+        "hero-cheer": "url('/assets/hero-cheer.jpeg')",
       },
       colors: {
         primary: "#2775AD",

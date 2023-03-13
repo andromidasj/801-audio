@@ -4,7 +4,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
 import MusicSection from "~/components/MusicSection";
-import Portfolio from "./portfolio";
 
 const Home: NextPage = () => {
   const musicRef = useRef<null | HTMLDivElement>(null);
@@ -44,9 +43,12 @@ const Home: NextPage = () => {
       </div>
 
       <div ref={musicRef} className="m-auto bg-slate-900 p-16">
-        <MusicSection />
+        <h1 className="mb-10 text-center font-header text-4xl uppercase text-white">
+          Music
+        </h1>
+        <MusicSection n={4} />
         <br />
-        <Portfolio />
+        {/* <Portfolio /> */}
       </div>
     </>
   );
