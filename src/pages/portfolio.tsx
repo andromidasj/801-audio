@@ -5,6 +5,7 @@ import { involvementData } from "~/involvementData";
 import musicBg from "../../public/assets/hero-music.jpg";
 
 // import "react-image-gallery/styles/css/image-gallery.css";
+// import "src/styles/galleryOverride.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -19,7 +20,7 @@ export default function Portfolio() {
 
       <div className="bg-black">
         {/* Music */}
-        <div className="mt-[-64px]">
+        <div className="">
           <div className="relative h-96 bg-fixed">
             <Image
               priority
@@ -74,6 +75,7 @@ export default function Portfolio() {
                   showThumbs={false}
                   useKeyboardArrows
                   dynamicHeight
+                  className="opacity-100"
                 >
                   {set.images.map((img) => (
                     <div key={img} className="h-96">

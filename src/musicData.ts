@@ -1,5 +1,10 @@
 export const songs = [
   {
+    title: "Six Of One",
+    artist: "Parker Holt",
+    involvement: ["Mixing"],
+  },
+  {
     title: "In the Meantime",
     artist: "Josh Andromidas",
     involvement: ["Recording Vocals", "Mixing", "Mastering"],

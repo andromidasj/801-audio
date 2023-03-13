@@ -8,16 +8,13 @@ const config = {
         header: ["Anton", "sans-serif"],
       },
       backgroundImage: {
-        hero1: "url('/assets/bg-cropped.jpeg')",
+        "hero-mixer": "url('/assets/bg-mixer.jpg')",
         "hero-music": "url('/assets/hero-music.jpg')",
         "hero-cheer": "url('/assets/hero-cheer.jpeg')",
       },
     },
   },
   plugins: [],
-  variants: {
-    display: ["group-hover"],
-  },
 };
 
 module.exports = config;

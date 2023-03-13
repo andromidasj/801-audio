@@ -16,8 +16,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="relative mt-[-64px] flex h-[800px] flex-col items-center justify-between gap-12 bg-hero1 bg-contain bg-fixed bg-top p-40">
-        <h1 className="font-white font-header text-[140px] text-white">
+      <div className="relative flex h-[800px] flex-col items-center justify-between gap-12 bg-hero-mixer bg-cover bg-fixed bg-bottom p-40">
+        <h1 className="font-white font-logo text-[140px] text-white">
           801 AUDIO
         </h1>
 
