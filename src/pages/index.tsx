@@ -1,4 +1,3 @@
-import { IconArrowDown } from "@tabler/icons-react";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -27,12 +26,19 @@ const Home: NextPage = () => {
         </h2>
 
         <div className="flex w-full justify-evenly font-semibold sm:justify-center sm:gap-8">
-          <button
+          {/* <button
             className="flex w-44 items-center justify-center gap-2 rounded-sm bg-green-300 p-4 px-6 uppercase text-black drop-shadow hover:bg-green-400 active:scale-95"
             onClick={() => musicRef.current?.scrollIntoView()}
           >
             Portfolio <IconArrowDown size={18} />
-          </button>
+          </button> */}
+
+          <Link
+            href="/portfolio"
+            className="flex w-44 items-center justify-center gap-2 rounded-sm bg-green-300 p-4 px-6 uppercase text-black drop-shadow hover:bg-green-400 active:scale-95"
+          >
+            Portfolio
+          </Link>
 
           <Link
             href="/contact"
