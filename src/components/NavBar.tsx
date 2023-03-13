@@ -15,12 +15,12 @@ export default function NavBar() {
 
   function underlineCurrentPage(page: string) {
     return router.pathname === page
-      ? "underline decoration-white decoration-4 underline-offset-4"
+      ? "underline decoration-green-400 decoration-4 underline-offset-4"
       : "";
   }
 
   const hoverUnderline =
-    "decoration-green-500 decoration-4 underline-offset-4 hover:underline";
+    "decoration-white decoration-4 underline-offset-4 hover:underline";
 
   const menuItems = (
     <>

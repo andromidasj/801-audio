@@ -1,12 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
+import { Carousel } from "react-responsive-carousel";
 import MusicSection from "~/components/MusicSection";
 import { involvementData } from "~/involvementData";
 import musicBg from "../../public/assets/hero-music.jpg";
 
 // import "react-image-gallery/styles/css/image-gallery.css";
-// import "src/styles/galleryOverride.css";
-import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Portfolio() {
@@ -50,11 +49,11 @@ export default function Portfolio() {
             </h1>
           </div>
 
-          <div className="m-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="m-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {involvementData.map((set) => (
               <div
                 key={set.title}
-                className="flex flex-col gap-4 rounded-lg p-6 text-white"
+                className="flex flex-col gap-4 border-2 border-r-0 border-b-0 border-l-0 border-green-400 p-6 text-white"
               >
                 <h3 className="text-center font-logo text-2xl uppercase">
                   {set.title}
@@ -75,16 +74,16 @@ export default function Portfolio() {
                   showThumbs={false}
                   useKeyboardArrows
                   dynamicHeight
-                  className="opacity-100"
                 >
                   {set.images.map((img) => (
-                    <div key={img} className="h-96">
+                    <div key={img} className="h-96 overflow-clip">
                       <Image
                         src={`/assets/involvement_data/${set.title}/${img}`}
                         alt=""
-                        width={384}
-                        height={384}
-                        className="object-contain"
+                        // width={386}
+                        // height={386}
+                        fill
+                        className="rounded object-contain"
                       />
                     </div>
                   ))}

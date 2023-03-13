@@ -13,12 +13,12 @@ export default function MusicSection({ n }: { n?: number }) {
       {songs.slice(0, n).map((s) => (
         <div
           key={s.title}
-          className="m-auto flex w-full flex-col rounded bg-[#F1F3F4] transition-transform sm:h-44 sm:flex-row sm:hover:scale-[101%]"
+          className="m-auto flex w-full flex-col overflow-clip rounded bg-[#F1F3F4] transition-transform sm:h-44 sm:flex-row sm:hover:scale-[101%]"
         >
           <Image
             src={findAsset(s.title, "image")}
             alt={s.title}
-            className="w-full rounded-t sm:h-44 sm:w-44 sm:rounded-none sm:rounded-l"
+            className="w-full sm:h-44 sm:w-44"
             height={160}
             width={160}
             priority
@@ -32,7 +32,7 @@ export default function MusicSection({ n }: { n?: number }) {
             <audio
               controls
               src={findAsset(s.title, "audio")}
-              className="mt-4 w-full rounded-full sm:m-0"
+              className="mt-4 w-full sm:m-0"
             />
           </div>
         </div>
