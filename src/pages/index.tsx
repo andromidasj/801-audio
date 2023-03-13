@@ -3,7 +3,6 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
-import InvolvementSection from "~/components/InvolvementSection";
 import MusicSection from "~/components/MusicSection";
 
 const Home: NextPage = () => {
@@ -43,10 +42,13 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div ref={musicRef} className="m-auto scroll-m-16 bg-slate-900 p-16">
-        <MusicSection />
-        <hr className="m-16" />
-        <InvolvementSection />
+      <div ref={musicRef} className="m-auto bg-slate-900 p-16">
+        <h1 className="mb-10 text-center font-header text-4xl uppercase text-white">
+          Music
+        </h1>
+        <MusicSection n={4} />
+        <br />
+        {/* <Portfolio /> */}
       </div>
     </>
   );

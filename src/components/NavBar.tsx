@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 const HOME_PATH = "/";
 const ABOUT_PATH = "/about";
 const CONTACT_PATH = "/contact";
+const PORTFOLIO_PATH = "/portfolio";
 
 export default function NavBar() {
   const router = useRouter();
@@ -22,7 +23,7 @@ export default function NavBar() {
   return (
     <nav
       className={`sticky top-0 z-50 flex w-full items-center justify-between ${
-        scrolled.y || router.pathname !== HOME_PATH
+        scrolled.y || ![HOME_PATH, PORTFOLIO_PATH].includes(router.pathname)
           ? "bg-slate-900/50 backdrop-blur"
           : ""
       } px-8 py-4 font-semibold text-white transition-colors duration-300`}
@@ -38,6 +39,15 @@ export default function NavBar() {
             href={HOME_PATH}
           >
             Home
+          </Link>
+        </li>
+
+        <li>
+          <Link
+            className={underlineCurrentPage(PORTFOLIO_PATH) || hoverUnderline}
+            href={PORTFOLIO_PATH}
+          >
+            Portfolio
           </Link>
         </li>
 
