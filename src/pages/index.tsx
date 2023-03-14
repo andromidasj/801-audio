@@ -16,15 +16,17 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="relative flex h-[800px] flex-col items-center justify-between gap-12 bg-hero-mic bg-cover bg-bottom px-4 py-16 sm:bg-fixed sm:bg-right-bottom sm:p-40 lg:bg-bottom">
-        <h1 className="font-white text-center font-logo text-[100px] leading-none text-white drop-shadow-lg sm:text-[140px]">
-          801 AUDIO
-        </h1>
+      <div className="relative flex h-[800px] flex-col items-center justify-between gap-12 bg-hero-mic bg-cover bg-bottom px-4 py-20 sm:bg-fixed sm:py-40 lg:bg-bottom ">
+        <div className="flex flex-col gap-16 md:gap-4">
+          <h1 className="font-white text-center font-logo text-7xl leading-none text-white drop-shadow-lg sm:text-[100px] md:text-[140px]">
+            801 AUDIO
+          </h1>
 
-        <h2 className="text-center font-header text-5xl uppercase text-white drop-shadow-lg sm:text-6xl">
-          Where <span className="text-green-300">quality</span> meets
-          <span className="text-green-300"> creativity</span>
-        </h2>
+          <h2 className="text-center font-header text-4xl uppercase text-white drop-shadow-lg sm:text-5xl md:text-6xl">
+            Where <span className="text-green-300">quality</span> meets
+            <span className="text-green-300"> creativity</span>
+          </h2>
+        </div>
 
         <div className="flex w-full justify-evenly font-semibold sm:justify-center sm:gap-8">
           {/* <button
