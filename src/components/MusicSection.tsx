@@ -13,7 +13,7 @@ export default function MusicSection({ n }: { n?: number }) {
       {songs.slice(0, n).map((s) => (
         <div
           key={s.title}
-          className="m-auto flex w-full flex-col overflow-clip rounded bg-[#F1F3F4] transition-transform sm:h-44 sm:flex-row sm:hover:scale-[101%]"
+          className="m-auto flex w-full flex-col overflow-clip rounded bg-[#F1F3F4] text-black transition-transform sm:h-44 sm:flex-row sm:hover:scale-[101%]"
         >
           <Image
             src={findAsset(s.title, "image")}

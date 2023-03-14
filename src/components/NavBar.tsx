@@ -1,5 +1,5 @@
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useToggle, useWindowScroll } from "@mantine/hooks";
-import { IconMenu2, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -69,7 +69,7 @@ export default function NavBar() {
   return (
     <nav
       className={`sticky top-0 z-50 mb-[-64px] flex w-full list-none items-center justify-between px-8 py-4 font-semibold uppercase text-white transition-colors duration-300 ${
-        scrolled.y || ![HOME_PATH, PORTFOLIO_PATH].includes(router.pathname)
+        scrolled.y // || ![HOME_PATH, PORTFOLIO_PATH].includes(router.pathname)
           ? "bg-slate-900/50 backdrop-blur"
           : ""
       }`}
@@ -79,7 +79,11 @@ export default function NavBar() {
       </h1>
 
       <button className="z-10 sm:hidden" onClick={() => toggleMobileMenu()}>
-        {mobileMenu ? <IconX /> : <IconMenu2 />}
+        {mobileMenu ? (
+          <XMarkIcon className="h-8 w-8" />
+        ) : (
+          <Bars3Icon className="h-8 w-8" />
+        )}
       </button>
 
       <ul className="hidden justify-end gap-8 sm:flex">{menuItems}</ul>

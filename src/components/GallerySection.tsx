@@ -37,8 +37,8 @@ export default function GallerySection() {
                   alt=""
                   // width={386}
                   // height={386}
-                  blurDataURL="L57vr*Ri0zxv6lV?$%t810nh}sSO"
-                  placeholder="blur"
+                  // blurDataURL="L57vr*Ri0zxv6lV?$%t810nh}sSO"
+                  // placeholder="blur"
                   fill
                   className="rounded object-contain"
                 />
@@ -52,3 +52,16 @@ export default function GallerySection() {
     </div>
   );
 }
+
+// export const getStaticProps = async () => {
+//   // Remote Image (from external url or relative url like `/my-image.jpg`)
+//   const remoteImageProps = await getPlaiceholder(
+//     'https://source.unsplash.com/78gDPe4WWGE'
+//   )
+
+//   return {
+//     props: {
+//       remoteImageProps,
+//     },
+//   }
+// }

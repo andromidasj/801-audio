@@ -4,8 +4,8 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        logo: ["Tilt Warp"],
-        header: ["Anton", "sans-serif"],
+        logo: ["Tilt Warp", "Tahoma", "Verdana", "sans-serif"],
+        header: ["Anton", "Tahoma", "Verdana", "sans-serif"],
       },
       backgroundImage: {
         "hero-mixer": "url('/assets/bg-mixer.jpg')",

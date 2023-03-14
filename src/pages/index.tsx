@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           </h2>
         </div>
 
-        <div className="flex w-full justify-evenly font-semibold sm:justify-center sm:gap-8">
+        <div className="flex w-full justify-evenly font-semibold text-black sm:justify-center sm:gap-8">
           {/* <button
             className="flex w-44 items-center justify-center gap-2 rounded-sm bg-green-300 p-4 px-6 uppercase text-black drop-shadow hover:bg-green-400 active:scale-95"
             onClick={() => musicRef.current?.scrollIntoView()}
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
 
           <Link
             href="/portfolio"
-            className="flex w-44 items-center justify-center gap-2 rounded-sm bg-green-300 p-4 px-6 uppercase text-black drop-shadow hover:bg-green-400 active:scale-95"
+            className="flex w-44 items-center justify-center gap-2 rounded-sm bg-green-300 p-4 px-6 uppercase drop-shadow hover:bg-green-400 active:scale-95"
           >
             Portfolio
           </Link>

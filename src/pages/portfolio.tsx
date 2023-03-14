@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
+import GallerySection from "~/components/GallerySection";
 import MusicSection from "~/components/MusicSection";
+import PortfolioSection from "~/components/PortfolioSection";
 import musicBg from "../../public/assets/hero-music.jpeg";
 
-// import "react-image-gallery/styles/css/image-gallery.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import GallerySection from "~/components/GallerySection";
+import { gradesData } from "~/gradesData";
 
 export default function Portfolio() {
   return (
@@ -16,7 +17,51 @@ export default function Portfolio() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="">
+      <div>
+        <div className="flex h-96 items-center justify-center bg-hero-cheer bg-center md:bg-cover md:bg-fixed">
+          <h1 className="font-header text-6xl uppercase drop-shadow md:text-[100px]">
+            Portfolio
+          </h1>
+        </div>
+
+        <PortfolioSection title="Letter of Intent">
+          <p>
+            My name is Parker Holt and I have been pursuing a degree in digital
+            audio for the past three years. During my time here at UVU, I hope
+            to learn as much as I can across a variety of topics in the digital
+            audio field, as well as make strong connections with my classmates
+            here that can benefit me in the future. I would love to start
+            working as a mix engineer for podcasts or music, and then overtime
+            be able to have a consistent client base whether through a company
+            or under my own personal brand.
+          </p>
+        </PortfolioSection>
+
+        <PortfolioSection title="grades">
+          <table className="table-auto">
+            <thead>
+              <tr className="text-left uppercase">
+                <th className="px-6 py-4">Course</th>
+                <th className="px-6 py-4">Title</th>
+                <th className="px-6 py-4">Grade</th>
+                <th className="px-6 py-4">Credits</th>
+                <th className="px-6 py-4">Term</th>
+              </tr>
+            </thead>
+            <tbody>
+              {gradesData.map((e) => (
+                <tr key={e.course}>
+                  <td className="px-6 py-4">{e.course}</td>
+                  <td className="px-6 py-4">{e.title}</td>
+                  <td className="px-6 py-4">{e.grade}</td>
+                  <td className="px-6 py-4">{e.credits}</td>
+                  <td className="px-6 py-4">{e.term}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </PortfolioSection>
+
         {/* Music */}
         <div className="relative h-96 bg-fixed">
           <Image
@@ -28,7 +73,7 @@ export default function Portfolio() {
           />
 
           <div className="flex h-full items-center justify-center">
-            <h1 className="font-header text-[100px] uppercase text-white drop-shadow">
+            <h1 className="font-header text-[100px] uppercase drop-shadow">
               Music
             </h1>
           </div>
@@ -41,7 +86,7 @@ export default function Portfolio() {
         {/* Involvement */}
         <div className="">
           <div className="my-16 flex h-96 items-center justify-center bg-hero-cheer bg-center md:bg-cover md:bg-fixed">
-            <h1 className="font-header text-6xl uppercase text-white drop-shadow md:text-[100px]">
+            <h1 className="font-header text-6xl uppercase drop-shadow md:text-[100px]">
               Involvement
             </h1>
           </div>
