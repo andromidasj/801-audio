@@ -25,7 +25,7 @@ export default function Portfolio() {
         </div>
 
         <PortfolioSection title="Letter of Intent">
-          <p>
+          <p className="text-2xl">
             My name is Parker Holt and I have been pursuing a degree in digital
             audio for the past three years. During my time here at UVU, I hope
             to learn as much as I can across a variety of topics in the digital
@@ -38,28 +38,30 @@ export default function Portfolio() {
         </PortfolioSection>
 
         <PortfolioSection title="grades">
-          <table className="table-auto">
-            <thead>
-              <tr className="text-left uppercase">
-                <th className="px-6 py-4">Course</th>
-                <th className="px-6 py-4">Title</th>
-                <th className="px-6 py-4">Grade</th>
-                <th className="px-6 py-4">Credits</th>
-                <th className="px-6 py-4">Term</th>
-              </tr>
-            </thead>
-            <tbody>
-              {gradesData.map((e) => (
-                <tr key={e.course}>
-                  <td className="px-6 py-4">{e.course}</td>
-                  <td className="px-6 py-4">{e.title}</td>
-                  <td className="px-6 py-4">{e.grade}</td>
-                  <td className="px-6 py-4">{e.credits}</td>
-                  <td className="px-6 py-4">{e.term}</td>
+          <div className="mx-[-3rem] overflow-scroll">
+            <table className="ml-12 w-full table-auto text-lg">
+              <thead>
+                <tr className="border-b-2 text-left uppercase">
+                  <th className="p-4">Course</th>
+                  <th className="p-4">Title</th>
+                  <th className="p-4">Grade</th>
+                  <th className="p-4">Credits</th>
+                  <th className="p-4">Term</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {gradesData.map((e) => (
+                  <tr key={e.course}>
+                    <td className="p-4">{e.course}</td>
+                    <td className="p-4">{e.title}</td>
+                    <td className="p-4">{e.grade}</td>
+                    <td className="p-4">{e.credits}</td>
+                    <td className="p-4">{e.term}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </PortfolioSection>
 
         {/* Music */}

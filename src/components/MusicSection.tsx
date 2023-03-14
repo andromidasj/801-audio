@@ -17,7 +17,7 @@ export default function MusicSection({ n }: { n?: number }) {
         >
           <Image
             src={findAsset(s.title, "image")}
-            alt={s.title}
+            alt={`${s.title} by ${s.artist}`}
             className="w-full sm:h-44 sm:w-44"
             height={360}
             width={360}
