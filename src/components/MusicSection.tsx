@@ -19,8 +19,8 @@ export default function MusicSection({ n }: { n?: number }) {
             src={findAsset(s.title, "image")}
             alt={s.title}
             className="w-full sm:h-44 sm:w-44"
-            height={160}
-            width={160}
+            height={360}
+            width={360}
             priority
           />
 

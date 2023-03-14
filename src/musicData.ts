@@ -2,41 +2,41 @@ export const songs = [
   {
     title: "Six Of One",
     artist: "Parker Holt",
-    involvement: ["Mixing"],
+    involvement: ["Mixed"],
   },
   {
     title: "In the Meantime",
     artist: "Josh Andromidas",
-    involvement: ["Recording Vocals", "Mixing", "Mastering"],
+    involvement: ["Recorded Background Vocals", "Mixed"],
   },
   {
     title: "Sleeper",
     artist: "Josh Andromidas",
-    involvement: ["Recording Vocals", "Mixing", "Mastering"],
+    involvement: ["Recorded Vocals", "Mixed"],
   },
   {
     title: "Skeletons (Remix)",
     artist: "Mariah Maynes",
-    involvement: ["Mixing", "Mastering", "Producing"],
+    involvement: ["Mixed", "Produced"],
   },
   {
     title: "Ruin Me",
     artist: "Rachel Reynolds",
-    involvement: ["Mixing", "Mastering"],
+    involvement: ["Mixed"],
   },
   {
     title: "Alright",
     artist: "Braydon Manley",
-    involvement: ["Mixing", "Mastering"],
+    involvement: ["Mixed"],
   },
   {
     title: "Hallelujah",
     artist: "Parker Holt",
-    involvement: ["Arrangement", "Recording", "Mixing", "Mastering"],
+    involvement: ["Recorded", "Mixed"],
   },
   {
     title: "Tell Her You Love Her",
     artist: "Rachel Reynolds",
-    involvement: ["Mixing", "Mastering"],
+    involvement: ["Recorded Vocals", "Mixed", "Produced"],
   },
 ];

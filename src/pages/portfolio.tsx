@@ -19,26 +19,24 @@ export default function Portfolio() {
 
       <div className="bg-black">
         {/* Music */}
-        <div className="">
-          <div className="relative h-96">
-            <Image
-              priority
-              src={musicBg}
-              alt="MUSIC"
-              fill
-              className="absolute bg-center object-cover"
-            />
+        <div className="relative h-96 bg-fixed">
+          <Image
+            priority
+            src={musicBg}
+            alt="MUSIC"
+            fill
+            className="absolute bg-center object-cover"
+          />
 
-            <div className="flex h-full items-center justify-center">
-              <h1 className="font-header text-[100px] uppercase text-white drop-shadow">
-                Music
-              </h1>
-            </div>
+          <div className="flex h-full items-center justify-center">
+            <h1 className="font-header text-[100px] uppercase text-white drop-shadow">
+              Music
+            </h1>
           </div>
+        </div>
 
-          <div className="m-auto max-w-7xl p-8">
-            <MusicSection />
-          </div>
+        <div className="m-auto max-w-7xl p-8">
+          <MusicSection />
         </div>
 
         {/* Involvement */}
@@ -53,9 +51,9 @@ export default function Portfolio() {
             {involvementData.map((set) => (
               <div
                 key={set.title}
-                className="flex flex-col gap-4 border-2 border-r-0 border-b-0 border-l-0 border-green-400 p-6 text-white"
+                className="flex flex-col gap-4 border-b-2 border-green-400 p-6 text-white"
               >
-                <h3 className="text-center font-logo text-2xl uppercase">
+                <h3 className="text-center font-logo text-2xl uppercase decoration-green-400">
                   {set.title}
                 </h3>
 
