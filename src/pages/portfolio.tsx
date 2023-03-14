@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import MusicSection from "~/components/MusicSection";
 import { involvementData } from "~/involvementData";
-import musicBg from "../../public/assets/hero-music.jpg";
+import musicBg from "../../public/assets/hero-music.jpeg";
 
 // import "react-image-gallery/styles/css/image-gallery.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -17,7 +17,7 @@ export default function Portfolio() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="bg-black">
+      <div className="bg-slate-900">
         {/* Music */}
         <div className="relative h-96 bg-fixed">
           <Image
@@ -51,9 +51,9 @@ export default function Portfolio() {
             {involvementData.map((set) => (
               <div
                 key={set.title}
-                className="flex flex-col gap-4 border-b-2 border-green-400 p-6 text-white"
+                className="flex flex-col gap-4 border-b-0 border-green-400 p-6 text-white"
               >
-                <h3 className="text-center font-logo text-2xl uppercase decoration-green-400">
+                <h3 className="text-center font-logo text-2xl uppercase underline decoration-green-400">
                   {set.title}
                 </h3>
 
@@ -80,6 +80,8 @@ export default function Portfolio() {
                         alt=""
                         // width={386}
                         // height={386}
+                        blurDataURL="L57vr*Ri0zxv6lV?$%t810nh}sSO"
+                        placeholder="blur"
                         fill
                         className="rounded object-contain"
                       />

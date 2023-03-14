@@ -9,8 +9,9 @@ const config = {
       },
       backgroundImage: {
         "hero-mixer": "url('/assets/bg-mixer.jpg')",
-        "hero-music": "url('/assets/hero-music.jpg')",
+        "hero-music": "url('/assets/hero-music.jpeg')",
         "hero-cheer": "url('/assets/hero-cheer.jpeg')",
+        "hero-mic": "url('/assets/hero-mic.jpeg')",
       },
     },
   },

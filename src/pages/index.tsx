@@ -16,12 +16,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="relative flex h-[800px] flex-col items-center justify-between gap-12 bg-hero-mixer bg-cover bg-fixed bg-bottom px-4 py-40 sm:bg-bottom sm:p-40">
-        <h1 className="font-white text-center font-logo text-[100px] leading-none text-white sm:text-[140px]">
+      <div className="relative flex h-[800px] flex-col items-center justify-between gap-12 bg-hero-mic bg-cover bg-bottom px-4 py-16 sm:bg-fixed sm:bg-right-bottom sm:p-40 lg:bg-bottom">
+        <h1 className="font-white text-center font-logo text-[100px] leading-none text-white drop-shadow-lg sm:text-[140px]">
           801 AUDIO
         </h1>
 
-        <h2 className="text-center font-header text-5xl uppercase text-white drop-shadow-sm sm:text-6xl">
+        <h2 className="text-center font-header text-5xl uppercase text-white drop-shadow-lg sm:text-6xl">
           Where <span className="text-green-300">quality</span> meets
           <span className="text-green-300"> creativity</span>
         </h2>
