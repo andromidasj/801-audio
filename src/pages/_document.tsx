@@ -17,7 +17,7 @@ export default class _Document extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body>
+        <body className="bg-slate-900">
           <Main />
           <NextScript />
         </body>
