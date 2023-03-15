@@ -1,68 +1,40 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useToggle, useWindowScroll } from "@mantine/hooks";
+import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 const HOME_PATH = "/";
-// const ABOUT_PATH = "/about";
-const CONTACT_PATH = "/contact";
 const PORTFOLIO_PATH = "/portfolio";
+const CONTACT_PATH = "/contact";
 
 export default function NavBar() {
-  const router = useRouter();
   const [scrolled] = useWindowScroll();
   const [mobileMenu, toggleMobileMenu] = useToggle([false, true]);
 
-  function underlineCurrentPage(page: string) {
-    return router.pathname === page
-      ? "underline decoration-green-400 decoration-4 underline-offset-4"
-      : "";
+  function LinkItem({ path, name }: { path: string; name: string }) {
+    const router = useRouter();
+    return (
+      <li>
+        <Link
+          className={clsx(
+            "decoration-4 underline-offset-4 hover:underline",
+            router.pathname === path && "underline decoration-green-400"
+          )}
+          href={path}
+          onClick={() => toggleMobileMenu()}
+        >
+          {name}
+        </Link>
+      </li>
+    );
   }
-
-  const hoverUnderline =
-    "decoration-white decoration-4 underline-offset-4 hover:underline";
 
   const menuItems = (
     <>
-      <li>
-        <Link
-          className={underlineCurrentPage(HOME_PATH) || hoverUnderline}
-          href={HOME_PATH}
-          onClick={() => toggleMobileMenu()}
-        >
-          Home
-        </Link>
-      </li>
-
-      <li>
-        <Link
-          className={underlineCurrentPage(PORTFOLIO_PATH) || hoverUnderline}
-          href={PORTFOLIO_PATH}
-          onClick={() => toggleMobileMenu()}
-        >
-          Portfolio
-        </Link>
-      </li>
-
-      {/* <li>
-        <Link
-          className={underlineCurrentPage(ABOUT_PATH) || hoverUnderline}
-          href={ABOUT_PATH}
-          onClick={() => toggleMobileMenu()}
-        >
-          About
-        </Link>
-      </li> */}
-
-      <li>
-        <Link
-          className={underlineCurrentPage(CONTACT_PATH) || hoverUnderline}
-          href={CONTACT_PATH}
-          onClick={() => toggleMobileMenu()}
-        >
-          Contact
-        </Link>
-      </li>
+      <LinkItem path={HOME_PATH} name="Home" />
+      <LinkItem path={PORTFOLIO_PATH} name="Portfolio" />
+      <LinkItem path={CONTACT_PATH} name="Contact" />
     </>
   );
 

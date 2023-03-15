@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { songs } from "~/musicData";
+import UVULogo from "../../public/assets/uvu.png";
 
 const findAsset = (name: string, type: "image" | "audio") => {
   const path = "/assets/music/";
@@ -36,7 +37,15 @@ export default function MusicSection({ n }: { n?: number }) {
             priority
           />
 
-          <div className="flex w-full flex-col justify-between p-4">
+          <div className="relative flex w-full flex-col justify-between p-4">
+            {s.title === "Six Of One" && (
+              <Image
+                className="absolute right-0 top-0 z-10"
+                src={UVULogo}
+                alt="UVU Logo"
+                height={60}
+              />
+            )}
             <h3 className="text-lg font-bold">
               {s.title} • {s.artist}
             </h3>

@@ -3,7 +3,7 @@ import PortfolioSection from "./PortfolioSection";
 
 export default function Grades() {
   return (
-    <PortfolioSection title="grades">
+    <PortfolioSection title="Grades">
       <table className="table-auto text-xl md:m-8">
         <thead>
           <tr className="border-b-2 border-green-400/80 text-left uppercase">
