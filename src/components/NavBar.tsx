@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const HOME_PATH = "/";
-const ABOUT_PATH = "/about";
+// const ABOUT_PATH = "/about";
 const CONTACT_PATH = "/contact";
 const PORTFOLIO_PATH = "/portfolio";
 

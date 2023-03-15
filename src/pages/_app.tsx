@@ -1,28 +1,20 @@
 import { type AppType } from "next/dist/shared/lib/utils";
+import Footer from "~/components/Footer";
 import NavBar from "~/components/NavBar";
 
 import "~/styles/globals.css";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <>
-      <NavBar />
-      <div className="m-auto">
-        <Component {...pageProps} />
+    <div className="flex min-h-screen flex-col justify-between">
+      <div>
+        <NavBar />
+        <div className="m-auto">
+          <Component {...pageProps} />
+        </div>
       </div>
-      <footer className="mt-12 mb-4 flex justify-center text-slate-400">
-        <a
-          href="https://github.com/andromidasj"
-          target="_blank"
-          referrerPolicy="no-referrer"
-        >
-          Made with 💚 by{" "}
-          <span className="transition-colors duration-500 hover:text-white">
-            Josh Andromidas
-          </span>
-        </a>
-      </footer>
-    </>
+      <Footer />
+    </div>
   );
 };
 
