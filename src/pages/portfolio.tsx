@@ -22,19 +22,20 @@ export default function Portfolio() {
       <div>
         <div className="mb-16 flex h-96 items-center justify-center bg-hero-portfolio bg-bottom md:bg-cover md:bg-fixed">
           <h1 className="font-header text-6xl uppercase drop-shadow md:text-[100px]">
-            Portfolio
+            Parker Holt Portfolio
           </h1>
         </div>
 
         <PortfolioSection title="Letter of Intent">
           <div className="mt-8 flex flex-col gap-6 text-2xl md:m-8">
             <p>
-              Hello! My name is Parker Holt and I am currently pursuing a degree
-              in digital audio at Utah Valley University. Over the past three
-              years, I have immersed myself in this field and have become
-              passionate about all things audio. From recording and mixing to
-              mastering and sound design, I am constantly seeking to expand my
-              knowledge and improve my skills.
+              Hello! My name is <span className="font-bold">Parker Holt</span>{" "}
+              and I am currently pursuing a degree in digital audio at Utah
+              Valley University. Over the past three years, I have immersed
+              myself in this field and have become passionate about all things
+              audio. From recording and mixing to mastering and sound design, I
+              am constantly seeking to expand my knowledge and improve my
+              skills.
             </p>
             <p>
               As a student at UVU, I have been fortunate to have access to
