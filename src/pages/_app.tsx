@@ -10,6 +10,15 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       <div className="m-auto">
         <Component {...pageProps} />
       </div>
+      <footer className="mt-12 mb-4 flex justify-center text-slate-400">
+        <a
+          href="https://github.com/andromidasj"
+          target="_blank"
+          referrerPolicy="no-referrer"
+        >
+          Made with 💚 by Josh Andromidas
+        </a>
+      </footer>
     </>
   );
 };

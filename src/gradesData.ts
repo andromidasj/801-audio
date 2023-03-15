@@ -58,7 +58,7 @@ export const gradesData: GradeResult[] = [
   },
   {
     course: "DGM 2481",
-    title: "Intro Digital Audi Restoration",
+    title: "Intro to Digital Audio Restoration",
     grade: "A",
     credits: 3,
     term: "2021 FALL",

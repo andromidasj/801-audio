@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>801 Audio</title>
-        <meta name="description" content="Parker Holt's Portfolio" />
+        <meta name="description" content="801 Audio by Parker Holt" />
         <meta name="theme-color" content="#0f172a" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -58,7 +58,6 @@ const Home: NextPage = () => {
         </h1>
         <MusicSection n={4} />
         <br />
-        {/* <Portfolio /> */}
       </div>
     </>
   );

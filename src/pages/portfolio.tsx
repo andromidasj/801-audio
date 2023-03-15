@@ -4,7 +4,6 @@ import GallerySection from "~/components/GallerySection";
 import MusicSection from "~/components/MusicSection";
 import PortfolioSection from "~/components/PortfolioSection";
 import { gradesData } from "~/gradesData";
-import musicBg from "../../public/assets/hero-music.jpeg";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -13,7 +12,10 @@ export default function Portfolio() {
     <>
       <Head>
         <title>Parker Holt Portfolio</title>
-        <meta name="description" content="Parker Holt's Portfolio" />
+        <meta
+          name="description"
+          content="Parker Holt's Digital Audio Portfolio"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -99,10 +101,7 @@ export default function Portfolio() {
         </PortfolioSection>
 
         <PortfolioSection title="Proficiency">
-          {/* <h2 className="m-8 text-center text-4xl">
-            Grade for Location Sound Proficiency (DGM 2440): 70/80 (88%)
-          </h2> */}
-          <div className="m-8 flex justify-between text-3xl">
+          <div className="m-8 flex flex-col items-center justify-between gap-4 text-center text-3xl md:flex-row">
             <span>Location Sound Proficiency</span>
             <span>DGM 2440</span>
             <span>70/80 (88%)</span>
@@ -110,14 +109,14 @@ export default function Portfolio() {
         </PortfolioSection>
 
         {/* Music */}
-        <div className="relative h-96 bg-fixed">
-          <Image
+        <div className="relative h-96 bg-hero-music bg-cover bg-fixed bg-center">
+          {/* <Image
             priority
             src={musicBg}
             alt="MUSIC"
             fill
             className="absolute bg-center object-cover"
-          />
+          /> */}
 
           <div className="flex h-full items-center justify-center">
             <h1 className="font-header text-[100px] uppercase drop-shadow">
