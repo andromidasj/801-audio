@@ -22,7 +22,7 @@ export default function NavBar() {
             router.pathname === path && "underline decoration-green-400"
           )}
           href={path}
-          onClick={() => toggleMobileMenu()}
+          onClick={() => toggleMobileMenu(false)}
         >
           {name}
         </Link>
@@ -40,11 +40,10 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 mb-[-64px] flex w-full list-none items-center justify-between px-8 py-4 font-semibold uppercase text-white transition-colors ${
-        scrolled.y // || ![HOME_PATH, PORTFOLIO_PATH].includes(router.pathname)
-          ? "bg-slate-900/50 backdrop-blur"
-          : ""
-      }`}
+      className={clsx(
+        "sticky top-0 z-50 mb-[-64px] flex w-full list-none items-center justify-between px-8 py-4 font-semibold uppercase text-white transition-colors",
+        scrolled.y && "bg-slate-900/50 backdrop-blur"
+      )}
     >
       <h1 className="font-logo text-2xl">
         <Link href={HOME_PATH}>801 AUDIO</Link>
