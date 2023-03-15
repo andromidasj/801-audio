@@ -12,6 +12,7 @@ const config = {
         "hero-music": "url('/assets/hero-music.jpeg')",
         "hero-cheer": "url('/assets/hero-cheer.jpeg')",
         "hero-mic": "url('/assets/hero-mic.jpeg')",
+        "hero-portfolio": "url('/assets/portfolio-banner.jpeg')",
       },
     },
   },

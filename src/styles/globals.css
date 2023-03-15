@@ -11,11 +11,21 @@ html {
   scroll-behavior: smooth;
 }
 
-.carousel .control-arrow,
+/* .carousel .control-arrow,
 .carousel.carousel-slider .control-arrow {
   opacity: 1 !important;
-}
+} */
 
 /* .image-gallery-left-nav .image-gallery-right-nav .image-gallery-svg {
   width: 25px !important;
 } */
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  height: 120px;
+  width: 30px !important;
+}
+
+.image-gallery-bullets {
+  transform: scale(0.8) !important;
+}
