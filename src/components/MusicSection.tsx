@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState } from "react";
 import { songs } from "~/musicData";
 
 const findAsset = (name: string, type: "image" | "audio") => {
@@ -8,6 +9,17 @@ const findAsset = (name: string, type: "image" | "audio") => {
 };
 
 export default function MusicSection({ n }: { n?: number }) {
+  const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(
+    null
+  );
+
+  const handlePlay = (audio: HTMLAudioElement) => {
+    if (currentAudio && currentAudio !== audio) {
+      currentAudio.pause();
+    }
+    setCurrentAudio(audio);
+  };
+
   return (
     <div className="grid w-full gap-8 md:grid-cols-1 lg:mx-0 lg:grid-cols-2">
       {songs.slice(0, n).map((s) => (
@@ -33,6 +45,7 @@ export default function MusicSection({ n }: { n?: number }) {
               controls
               src={findAsset(s.title, "audio")}
               className="mt-4 w-full sm:m-0"
+              ref={(audio) => audio && (audio.onplay = () => handlePlay(audio))}
             />
           </div>
         </div>

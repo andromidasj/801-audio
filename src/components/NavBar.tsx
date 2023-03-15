@@ -44,7 +44,7 @@ export default function NavBar() {
         </Link>
       </li>
 
-      <li>
+      {/* <li>
         <Link
           className={underlineCurrentPage(ABOUT_PATH) || hoverUnderline}
           href={ABOUT_PATH}
@@ -52,7 +52,7 @@ export default function NavBar() {
         >
           About
         </Link>
-      </li>
+      </li> */}
 
       <li>
         <Link
@@ -68,7 +68,7 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 mb-[-64px] flex w-full list-none items-center justify-between px-8 py-4 font-semibold uppercase text-white transition-colors duration-300 ${
+      className={`sticky top-0 z-50 mb-[-64px] flex w-full list-none items-center justify-between px-8 py-4 font-semibold uppercase text-white transition-colors ${
         scrolled.y // || ![HOME_PATH, PORTFOLIO_PATH].includes(router.pathname)
           ? "bg-slate-900/50 backdrop-blur"
           : ""
@@ -89,7 +89,7 @@ export default function NavBar() {
       <ul className="hidden justify-end gap-8 sm:flex">{menuItems}</ul>
 
       <div
-        className={`absolute inset-0 flex h-screen w-screen flex-col items-center justify-center gap-16 bg-black text-2xl transition-opacity sm:hidden ${
+        className={`absolute inset-0 flex h-screen w-screen flex-col items-center justify-center gap-16 bg-black text-2xl transition-opacity duration-300 sm:hidden ${
           mobileMenu ? "opacity-100" : "invisible opacity-0"
         }`}
       >

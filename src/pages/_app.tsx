@@ -16,7 +16,10 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           target="_blank"
           referrerPolicy="no-referrer"
         >
-          Made with 💚 by Josh Andromidas
+          Made with 💚 by{" "}
+          <span className="transition-colors duration-500 hover:text-white">
+            Josh Andromidas
+          </span>
         </a>
       </footer>
     </>

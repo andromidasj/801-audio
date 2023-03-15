@@ -97,28 +97,22 @@ export default function Portfolio() {
                   <td className="p-4">{e.grade}</td>
                 </tr>
               ))}
+              <tr>
+                <td className="p-4"></td>
+                <td className="p-4 text-center">• • •</td>
+                <td className="p-4"></td>
+              </tr>
+              <tr>
+                <td className="p-4">{"DGM 2440"}</td>
+                <td className="p-4">{"Location Sound Proficiency"}</td>
+                <td className="p-4">{"70/80 (88%)"}</td>
+              </tr>
             </tbody>
           </table>
         </PortfolioSection>
 
-        <PortfolioSection title="Proficiency">
-          <div className="m-8 flex flex-col items-center justify-between gap-4 text-center text-3xl md:flex-row">
-            <span>Location Sound Proficiency</span>
-            <span>DGM 2440</span>
-            <span>70/80 (88%)</span>
-          </div>
-        </PortfolioSection>
-
         {/* Music */}
         <div className="relative h-96 bg-hero-music bg-cover bg-fixed bg-center">
-          {/* <Image
-            priority
-            src={musicBg}
-            alt="MUSIC"
-            fill
-            className="absolute bg-center object-cover"
-          /> */}
-
           <div className="flex h-full items-center justify-center">
             <h1 className="font-header text-[100px] uppercase drop-shadow">
               Music
