@@ -13,15 +13,9 @@ const generateImageNames = (n: number) =>
 
 export const involvementData: InvolvementData[] = [
   {
-    title: "Lake Mountain Early Morning Jazz Recording",
+    title: "Vista Heights Middle School Recording Camp",
     description:
-      "Here I helped record Lake Mountain Middle School's advanced jazz band to submit for state qualifications. I set up the mics and ran the session, as well as did light mixing afterwards.",
-    images: generateImageNames(2),
-  },
-  {
-    title: "Lake Mountain Middle School Recording Camp",
-    description:
-      "Here I recorded the Lake Mountain Middle School bands to submit for state band qualifications. I was in charge of mic set up and placement, using the mixer, and running the Pro Tools session.",
+      "Here I helped record the Vista Heights Middle School concert band and symphonic band to submit recordings for the state band festival. I helped set up the mics, ran them through a mixer, and then ran the recording session. This was a good experience with recording large ensembles in a very large space.",
     images: generateImageNames(4),
   },
   {
@@ -35,6 +29,12 @@ export const involvementData: InvolvementData[] = [
     description:
       "On October 28, 2022 I went to UVU's Mixtape Live which was a showcase of the commercial music groups. It was a fun night and the performances from the groups were great! The mix in the last group I listened to was very vocal heavy, and it was distracting throughout each of their songs. Other than that, I really enjoyed all of the performances.",
     images: generateImageNames(5),
+  },
+  {
+    title: "Lake Mountain Early Morning Jazz Recording",
+    description:
+      "Here I helped record Lake Mountain Middle School's advanced jazz band to submit for state qualifications. I set up the mics and ran the session, as well as did light mixing afterwards.",
+    images: generateImageNames(2),
   },
   {
     title: "Nashville bar concerts",
@@ -67,16 +67,16 @@ export const involvementData: InvolvementData[] = [
     images: generateImageNames(4),
   },
   {
-    title: "Vista Heights Middle School Recording Camp",
-    description:
-      "Here I helped the Vista Heights Middle School bands record themselves for qualification for the state band festival. I helped set up the mics, ran them through a mixer, and then ran the recording session. This was a good experience with recording large ensembles in a very large space.",
-    images: generateImageNames(4),
-  },
-  {
     title: "Wasatch Mountain Film Festival 2022",
     description:
       "In April of 2022 I went to the Wasatch Mountain Film Festival and it was a great experience. I watched 7 films, and they all had focus on the mountains in Utah and the greater west coast. Some were about locals in the Wasatch Mountains, while others focused on mountains in Alaska and Washington. I also attended a meet an greet with the producers behind one of the longer films, and it was great to hear what advice they had for aspiring film makers and what they felt would help the most for finding success early in your career.",
     images: generateImageNames(6),
+  },
+  {
+    title: "Lake Mountain Middle School Recording Camp",
+    description:
+      "Here I helped record Lake Mountain Middle School's concert band and symphonic band to submit recordings to qualify for the state band festival. I was in charge of the mic set up and placement, using the mixer and running the Pro Tools session.",
+    images: generateImageNames(4),
   },
   {
     title: "Westlake Marching Band Live Sound",
