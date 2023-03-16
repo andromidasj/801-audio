@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="mt-12 mb-4 flex justify-center text-xs text-slate-400">
       <Parallax
-        rotate={[5, 0, "easeOut"]}
+        scale={[0.92, 1, "easeOut"]}
         easing="easeIn"
         shouldAlwaysCompleteAnimation={true}
         disabled={pathname === "/contact"}
