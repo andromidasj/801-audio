@@ -14,6 +14,7 @@ const Home: NextPage = () => {
         <meta name="description" content="801 Audio by Parker Holt" />
         <meta name="theme-color" content="#0f172a" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" href="/assets/hero-mic.jpeg" as="image" />
       </Head>
 
       <div className="relative flex h-[800px] flex-col items-center justify-between gap-12 bg-hero-mic bg-cover bg-bottom px-4 py-20 sm:bg-fixed sm:py-40 lg:bg-bottom ">

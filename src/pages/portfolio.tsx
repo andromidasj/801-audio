@@ -17,6 +17,7 @@ export default function Portfolio() {
           content="Parker Holt's Digital Audio Portfolio"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" href="/assets/portfolio-banner.jpeg" as="image" />
       </Head>
 
       <ParallaxBanner
