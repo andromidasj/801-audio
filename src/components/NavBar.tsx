@@ -13,13 +13,13 @@ export default function NavBar() {
   const [mobileMenu, toggleMobileMenu] = useToggle([false, true]);
 
   function LinkItem({ path, name }: { path: string; name: string }) {
-    const router = useRouter();
+    const { pathname } = useRouter();
     return (
       <li>
         <Link
           className={clsx(
             "decoration-4 underline-offset-4 hover:underline",
-            router.pathname === path && "underline decoration-green-400"
+            pathname === path && "underline decoration-green-400"
           )}
           href={path}
           onClick={() => toggleMobileMenu(false)}

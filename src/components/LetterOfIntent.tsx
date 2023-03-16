@@ -5,7 +5,6 @@ import PortfolioSection from "./PortfolioSection";
 
 export default function LetterOfIntent() {
   const isSm = useMediaQuery("(max-width: 640px)");
-  console.log("🚀 ~ LetterOfIntent ~ isSm:", isSm);
 
   return (
     <PortfolioSection title="Letter of Intent">
