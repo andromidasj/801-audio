@@ -72,6 +72,7 @@ export default function Portfolio() {
       {/* Involvement */}
       <div>
         <ParallaxBanner
+          className="my-16 h-96 w-full"
           layers={[
             { image: "/assets/hero-cheer.jpeg", speed: -20 },
             {
@@ -86,7 +87,6 @@ export default function Portfolio() {
               ),
             },
           ]}
-          className="h-96 w-full"
         />
       </div>
 
