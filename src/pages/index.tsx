@@ -53,7 +53,7 @@ const Home: NextPage = () => {
       </div>
 
       <div ref={musicRef} className="m-auto bg-slate-900 p-8">
-        <h1 className="mb-10 text-center font-header text-4xl uppercase text-white underline decoration-green-300">
+        <h1 className="mb-10 text-center font-header text-4xl uppercase text-white underline decoration-green-300 underline-offset-8">
           Music
         </h1>
         <MusicSection n={4} />

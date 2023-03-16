@@ -1,20 +1,24 @@
+import { useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
+import { Parallax } from "react-scroll-parallax";
 import PortfolioSection from "./PortfolioSection";
 
 export default function LetterOfIntent() {
+  const isSm = useMediaQuery("(max-width: 640px)");
+  console.log("🚀 ~ LetterOfIntent ~ isSm:", isSm);
+
   return (
     <PortfolioSection title="Letter of Intent">
       <div className="mt-8 flex flex-col gap-6 text-2xl md:m-8">
         <p>
-          Hello! My name is <span className="font-bold">Parker Holt</span> and I
-          am currently pursuing a degree in digital audio at{" "}
-          <span className="font-bold text-green-400">
-            Utah Valley University
-          </span>
-          . Over the past three years, I have immersed myself in this field and
-          have become passionate about all things audio. From recording and
-          mixing to mastering and sound design, I am constantly seeking to
-          expand my knowledge and improve my skills.
+          Hello! My name is{" "}
+          <span className="font-bold text-blue-200">Parker Holt</span> and I am
+          currently pursuing a degree in digital audio at{" "}
+          <span className="text-green-400">Utah Valley University</span>. Over
+          the past three years, I have immersed myself in this field and have
+          become passionate about all things audio. From recording and mixing to
+          mastering and sound design, I am constantly seeking to expand my
+          knowledge and improve my skills.
         </p>
         <p>
           As a student at UVU, I have been fortunate to have access to
@@ -46,13 +50,21 @@ export default function LetterOfIntent() {
           expand my brand.
         </p>
       </div>
-      <Image
-        src={"assets/signature.svg"}
-        alt="Parker Holt signature"
-        className="self-end"
-        height={82}
-        width={300}
-      />
+      <div className="flex flex-row-reverse">
+        <Parallax
+          // rotate={[0, 5]}
+          translateX={[0, -10]}
+          // shouldAlwaysCompleteAnimation
+          disabled={isSm}
+        >
+          <Image
+            src={"assets/signature.svg"}
+            alt="Parker Holt signature"
+            height={82}
+            width={300}
+          />
+        </Parallax>
+      </div>
     </PortfolioSection>
   );
 }
