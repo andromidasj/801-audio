@@ -37,7 +37,7 @@ export const gradesData: GradeResult[] = [
   },
   {
     course: "DGM 2430",
-    title: "Core Mixing Princibles",
+    title: "Core Mixing Principles",
     grade: "A",
     credits: 3,
     term: "2022 SPRING",
