@@ -27,6 +27,8 @@ export default function Contact() {
         <a
           href={`mailto:${EMAIL}?subject=801 Audio Inquiry`}
           className="m-auto flex items-center gap-4 font-logo hover:text-green-300"
+          target="_blank"
+          referrerPolicy="no-referrer"
         >
           <AtSymbolIcon className="h-7 w-7 stroke-2 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14" />
           {EMAIL}
