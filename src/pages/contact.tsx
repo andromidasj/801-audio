@@ -1,4 +1,5 @@
 import { AtSymbolIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import Head from "next/head";
 import Image from "next/image";
 
 export default function Contact() {
@@ -7,6 +8,12 @@ export default function Contact() {
 
   return (
     <>
+      <Head>
+        <title>Contact | 801 Audio</title>
+        <meta name="description" content="801 Audio by Parker Holt" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <div className="relative mb-16 h-96 w-full">
         <Image
           priority

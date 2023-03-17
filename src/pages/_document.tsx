@@ -34,7 +34,10 @@ export default class _Document extends Document {
             href="/favicon-16x16.png"
           />
           <link rel="manifest" href="/site.webmanifest" />
+          <link rel="icon" href="/favicon.ico" />
+          <meta name="theme-color" content="#0f172a" />
         </Head>
+
         <body className="bg-slate-900 text-slate-50">
           <Main />
           <NextScript />

@@ -11,12 +11,11 @@ export default function Portfolio() {
   return (
     <>
       <Head>
-        <title>Parker Holt Portfolio</title>
+        <title>Parker Holt Portfolio | 801 Audio</title>
         <meta
           name="description"
           content="Parker Holt's Digital Audio Portfolio"
         />
-        <link rel="icon" href="/favicon.ico" />
         <link rel="preload" href="/assets/portfolio-banner.jpeg" as="image" />
       </Head>
 

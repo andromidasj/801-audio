@@ -12,8 +12,6 @@ const Home: NextPage = () => {
       <Head>
         <title>801 Audio</title>
         <meta name="description" content="801 Audio by Parker Holt" />
-        <meta name="theme-color" content="#0f172a" />
-        <link rel="icon" href="/favicon.ico" />
         <link rel="preload" href="/assets/hero-mic.jpeg" as="image" />
       </Head>
 
