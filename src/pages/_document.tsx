@@ -36,6 +36,12 @@ export default class _Document extends Document {
           <link rel="manifest" href="/site.webmanifest" />
           <link rel="icon" href="/favicon.ico" />
           <meta name="theme-color" content="#0f172a" />
+          <meta property="og:title" content="801 Audio" />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content="https://801audio.com/assets/og-image.jpg"
+          />
         </Head>
 
         <body className="bg-slate-900 text-slate-50">
