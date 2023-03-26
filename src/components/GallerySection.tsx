@@ -11,7 +11,7 @@ export default function GallerySection() {
       {involvementData.map((set) => (
         <div
           key={set.title}
-          className="flex flex-col gap-4 border-b-0 border-green-400 p-6 text-white"
+          className="flex flex-col gap-3 border-b-0 border-green-400 p-6 text-white"
         >
           <h3 className="[100px] text-center font-logo text-2xl uppercase underline decoration-green-400 underline-offset-4">
             {set.title}
@@ -26,45 +26,17 @@ export default function GallerySection() {
             showPlayButton={false}
           />
 
-          {/* <Carousel
-            infiniteLoop
-            showStatus={false}
-            showThumbs={false}
-            useKeyboardArrows
-            dynamicHeight
-          >
-            {set.images.map((img) => (
-              <div key={img} className="h-96 overflow-clip">
-                <Image
-                  src={`/assets/involvement_data/${set.title}/${img}`}
-                  alt=""
-                  // width={386}
-                  // height={386}
-                  // blurDataURL="L57vr*Ri0zxv6lV?$%t810nh}sSO"
-                  // placeholder="blur"
-                  fill
-                  className="rounded object-contain"
-                />
-              </div>
-            ))}
-          </Carousel> */}
+          <div className="flex flex-col gap-1">
+            {set.date && (
+              <span className=" italic text-slate-400">
+                {set.date.toDateString()}
+              </span>
+            )}
 
-          <p>{set.description}</p>
+            <p>{set.description}</p>
+          </div>
         </div>
       ))}
     </div>
   );
 }
-
-// export const getStaticProps = async () => {
-//   // Remote Image (from external url or relative url like `/my-image.jpg`)
-//   const remoteImageProps = await getPlaiceholder(
-//     'https://source.unsplash.com/78gDPe4WWGE'
-//   )
-
-//   return {
-//     props: {
-//       remoteImageProps,
-//     },
-//   }
-// }
