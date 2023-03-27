@@ -14,7 +14,7 @@ export default function Portfolio() {
         <title>Parker Holt Portfolio | 801 Audio</title>
         <meta
           name="description"
-          content="Parker Holt's Digital Audio Portfolio"
+          content="Parker Holt's Digital Audio Portfolio | 801 Audio"
         />
         <link rel="preload" href="/assets/portfolio-banner.jpeg" as="image" />
       </Head>
