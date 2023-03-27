@@ -1,6 +1,4 @@
-// import Image from "next/image";
 import ReactImageGallery from "react-image-gallery";
-// import { Carousel } from "react-responsive-carousel";
 import { involvementData } from "~/involvementData";
 
 import "react-image-gallery/styles/css/image-gallery.css";
