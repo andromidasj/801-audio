@@ -2,7 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
-import MusicSection from "~/components/MusicSection";
+import DemoReel from "~/components/DemoReel";
 
 const Home: NextPage = () => {
   const musicRef = useRef<null | HTMLDivElement>(null);
@@ -28,18 +28,11 @@ const Home: NextPage = () => {
         </div>
 
         <div className="flex w-full justify-evenly font-semibold text-black sm:justify-center sm:gap-8">
-          {/* <button
-            className="flex w-44 items-center justify-center gap-2 rounded-sm bg-green-300 p-4 px-6 uppercase text-black drop-shadow hover:bg-green-400 active:scale-95"
-            onClick={() => musicRef.current?.scrollIntoView()}
-          >
-            Portfolio <IconArrowDown size={18} />
-          </button> */}
-
           <Link
-            href="/portfolio"
+            href="/music"
             className="flex w-44 items-center justify-center gap-2 rounded-sm bg-green-300 p-4 px-6 uppercase drop-shadow hover:bg-green-400 active:scale-95"
           >
-            Portfolio
+            Music
           </Link>
 
           <Link
@@ -52,11 +45,10 @@ const Home: NextPage = () => {
       </div>
 
       <div ref={musicRef} className="m-auto bg-slate-900 p-8">
-        <h1 className="mb-10 text-center font-header text-4xl uppercase text-white underline decoration-green-300 underline-offset-8">
-          Music
+        <h1 className="mb-10 text-center font-header text-5xl uppercase text-white underline decoration-green-300 underline-offset-8">
+          Demo Reel
         </h1>
-        <MusicSection n={4} />
-        <br />
+        <DemoReel />
       </div>
     </>
   );

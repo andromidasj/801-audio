@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const HOME_PATH = "/";
-const PORTFOLIO_PATH = "/portfolio";
+const MUSIC_PATH = "/music";
 const CONTACT_PATH = "/contact";
 
 export default function NavBar() {
@@ -33,7 +33,7 @@ export default function NavBar() {
   const menuItems = (
     <>
       <LinkItem path={HOME_PATH} name="Home" />
-      <LinkItem path={PORTFOLIO_PATH} name="Portfolio" />
+      <LinkItem path={MUSIC_PATH} name="Music" />
       <LinkItem path={CONTACT_PATH} name="Contact" />
     </>
   );

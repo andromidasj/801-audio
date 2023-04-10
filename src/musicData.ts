@@ -1,10 +1,5 @@
 export const songs = [
   {
-    title: "Six Of One",
-    artist: "Parker Holt",
-    involvement: ["Mixed"],
-  },
-  {
     title: "In the Meantime",
     artist: "Josh Andromidas",
     involvement: ["Recorded Background Vocals", "Mixed"],
@@ -28,11 +23,6 @@ export const songs = [
     title: "Ruin Me",
     artist: "Rachel Reynolds",
     involvement: ["Mixed"],
-  },
-  {
-    title: "Skeletons (Remix)",
-    artist: "Mariah Maynes",
-    involvement: ["Mixed", "Produced"],
   },
   {
     title: "Hallelujah",
