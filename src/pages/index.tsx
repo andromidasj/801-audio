@@ -2,10 +2,10 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
-import DemoReel from "~/components/DemoReel";
 
 const Home: NextPage = () => {
   const musicRef = useRef<null | HTMLDivElement>(null);
+  const DEMO_REEL_URL = "https://www.youtube.com/embed/kp3xrWf9zz8";
 
   return (
     <>
@@ -44,11 +44,21 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div ref={musicRef} className="m-auto bg-slate-900 p-8">
-        <h1 className="mb-10 text-center font-header text-5xl uppercase text-white underline decoration-green-300 underline-offset-8">
+      <div
+        ref={musicRef}
+        className="flex flex-col items-center gap-14 bg-slate-900 px-8"
+      >
+        <h1 className="mt-10 text-center font-header text-5xl uppercase text-white underline decoration-green-300 underline-offset-8 sm:text-6xl">
           Demo Reel
         </h1>
-        <DemoReel />
+
+        <iframe
+          className="aspect-video w-full sm:max-w-7xl sm:px-10"
+          src={DEMO_REEL_URL}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
       </div>
     </>
   );
