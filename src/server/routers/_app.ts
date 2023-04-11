@@ -6,7 +6,7 @@ import { publicProcedure, router } from "../trpc";
 export const appRouter = router({
   email: publicProcedure
     .input(FormSchema)
-    .mutation(({ input: { email, message, name } }) => {
+    .mutation(async ({ input: { email, message, name } }) => {
       try {
         FormSchema.parse({ email, message, name });
         console.log("correct input");
@@ -36,9 +36,9 @@ export const appRouter = router({
       };
 
       try {
-        // const res = await transporter.sendMail(content);
-        // console.log("✅ ~ .mutation ~ email sent!");
-        // console.log(res);
+        const res = await transporter.sendMail(content);
+        console.log("✅ ~ .mutation ~ email sent!");
+        console.log(res);
       } catch (error) {
         console.log("❌ ~ .mutation ~ error:", error);
         return { success: false, error };
