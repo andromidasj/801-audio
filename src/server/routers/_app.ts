@@ -31,7 +31,13 @@ export const appRouter = router({
         to: user,
         text: message,
         subject: `New message from ${name} at ${email}`,
-        html: `<p>${message}</p>`,
+        html: `
+          <h1>New message!</h1>
+          <br />
+          <strong>New email from ${name} at ${email}</strong>
+          <br />
+          <p>${message}</p>
+        `,
       };
 
       try {
