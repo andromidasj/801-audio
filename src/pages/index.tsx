@@ -33,8 +33,15 @@ const Home: NextPage = () => {
                   </h1>
 
                   <h2 className="text-center font-header text-4xl uppercase text-white drop-shadow-lg sm:text-5xl md:text-6xl">
-                    Where <span className="text-green-300">quality</span> meets
-                    <span className="text-green-300"> creativity</span>
+                    Where{" "}
+                    <span className="bg-gradient-to-br from-green-200 to-green-300 bg-clip-text text-transparent">
+                      quality
+                    </span>{" "}
+                    meets
+                    <span className="bg-gradient-to-br from-green-200 to-green-300 bg-clip-text text-transparent">
+                      {" "}
+                      creativity
+                    </span>
                   </h2>
                 </div>
 
