@@ -16,6 +16,8 @@ export const appRouter = router({
 
       const user = process.env.EMAIL;
       const pass = process.env.EMAIL_PASS;
+      console.log("🚀 ~ .mutation ~ user:", user);
+      console.log("🚀 ~ .mutation ~ pass:", pass);
 
       const transporter = nodemailer.createTransport({
         service: "gmail",
@@ -34,9 +36,9 @@ export const appRouter = router({
       };
 
       try {
-        const res = await transporter.sendMail(content);
-        console.log("✅ ~ .mutation ~ email sent!");
-        console.log(res);
+        // const res = await transporter.sendMail(content);
+        // console.log("✅ ~ .mutation ~ email sent!");
+        // console.log(res);
       } catch (error) {
         console.log("❌ ~ .mutation ~ error:", error);
         return { success: false, error };
