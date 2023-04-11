@@ -18,6 +18,7 @@ export default function Portfolio() {
 
       {/* Music */}
       <ParallaxBanner
+        className="h-96 w-full"
         layers={[
           { image: "/assets/hero-music.jpeg", speed: -20 },
           {
@@ -32,7 +33,6 @@ export default function Portfolio() {
             ),
           },
         ]}
-        className="h-96 w-full"
       />
 
       <div className="m-auto max-w-7xl p-8">

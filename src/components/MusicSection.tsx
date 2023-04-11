@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { songs } from "~/musicData";
-import UVULogo from "../../public/assets/uvu.png";
 
 const findAsset = (name: string, type: "image" | "audio") => {
   const path = "/assets/music/";
@@ -26,7 +25,7 @@ export default function MusicSection({ n }: { n?: number }) {
       {songs.slice(0, n).map((s) => (
         <div
           key={s.title}
-          className="m-auto flex w-full flex-col overflow-clip rounded bg-[#F1F3F4] text-black transition-transform sm:h-44 sm:flex-row sm:hover:scale-[101%]"
+          className="m-auto flex w-full flex-col overflow-clip rounded bg-[#F1F3F4] text-black transition-transform sm:h-44 sm:flex-row sm:hover:scale-[100.5%]"
         >
           <Image
             src={findAsset(s.title, "image")}
@@ -38,14 +37,6 @@ export default function MusicSection({ n }: { n?: number }) {
           />
 
           <div className="relative flex w-full flex-col justify-between p-4">
-            {s.title === "Six Of One" && (
-              <Image
-                className="absolute right-0 top-0 z-10"
-                src={UVULogo}
-                alt="UVU Logo"
-                height={60}
-              />
-            )}
             <h3 className="text-lg font-bold">
               {s.title} • {s.artist}
             </h3>

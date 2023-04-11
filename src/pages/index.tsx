@@ -2,10 +2,13 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
+import { ParallaxBanner } from "react-scroll-parallax";
+
+const VIDEO_ID = "kp3xrWf9zz8";
+const DEMO_REEL_URL = `https://www.youtube-nocookie.com/embed/${VIDEO_ID}?rel=0&enablejsapi=1`;
 
 const Home: NextPage = () => {
   const musicRef = useRef<null | HTMLDivElement>(null);
-  const DEMO_REEL_URL = "https://www.youtube.com/embed/kp3xrWf9zz8";
 
   return (
     <>
@@ -15,7 +18,48 @@ const Home: NextPage = () => {
         <link rel="preload" href="/assets/hero-mic.jpeg" as="image" />
       </Head>
 
-      <div className="relative flex h-[800px] flex-col items-center justify-between gap-12 bg-hero-mic bg-cover bg-bottom px-4 py-20 sm:bg-fixed sm:py-40 lg:bg-bottom ">
+      <ParallaxBanner
+        className="h-[600px] w-full sm:h-[800px]"
+        layers={[
+          { image: "/assets/hero-mic.jpeg", speed: -20 },
+          {
+            speed: -3,
+            // shouldAlwaysCompleteAnimation: true,
+            children: (
+              <div className="relative mt-10 flex h-full flex-col items-center justify-between gap-12 px-4 py-20 pb-52 sm:mt-0 sm:bg-fixed sm:py-40 lg:bg-bottom">
+                <div className="flex flex-col gap-16 md:gap-4">
+                  <h1 className="font-white text-center font-logo text-6xl leading-none text-white drop-shadow-lg sm:text-[100px] md:text-[140px]">
+                    801 AUDIO
+                  </h1>
+
+                  <h2 className="text-center font-header text-4xl uppercase text-white drop-shadow-lg sm:text-5xl md:text-6xl">
+                    Where <span className="text-green-300">quality</span> meets
+                    <span className="text-green-300"> creativity</span>
+                  </h2>
+                </div>
+
+                <div className="flex w-full justify-evenly gap-2 font-semibold text-black sm:justify-center sm:gap-8">
+                  <Link
+                    href="/music"
+                    className="flex w-44 items-center justify-center gap-2 rounded-sm bg-green-300 p-4 px-6 uppercase drop-shadow hover:bg-green-400 active:scale-95"
+                  >
+                    Music
+                  </Link>
+
+                  <Link
+                    href="/contact"
+                    className="w-40 rounded-sm bg-slate-50 p-4 px-6 text-center uppercase drop-shadow hover:bg-slate-200 active:scale-95"
+                  >
+                    Contact
+                  </Link>
+                </div>
+              </div>
+            ),
+          },
+        ]}
+      />
+
+      {/* <div className="relative flex h-[800px] flex-col items-center justify-between gap-12 bg-hero-mic bg-cover bg-bottom px-4 py-20 sm:bg-fixed sm:py-40 lg:bg-bottom ">
         <div className="flex flex-col gap-16 md:gap-4">
           <h1 className="font-white text-center font-logo text-7xl leading-none text-white drop-shadow-lg sm:text-[100px] md:text-[140px]">
             801 AUDIO
@@ -42,7 +86,8 @@ const Home: NextPage = () => {
             Contact
           </Link>
         </div>
-      </div>
+        <div className="absolute inset-x-0 bottom-0 h-6  bg-gradient-to-t from-slate-900"></div>
+      </div> */}
 
       <div
         ref={musicRef}
