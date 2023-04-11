@@ -17,7 +17,6 @@ export const appRouter = router({
       const user = process.env.EMAIL;
       const pass = process.env.EMAIL_PASS;
       console.log("🚀 ~ .mutation ~ user:", user);
-      console.log("🚀 ~ .mutation ~ pass:", pass);
 
       const transporter = nodemailer.createTransport({
         service: "gmail",
