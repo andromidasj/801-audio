@@ -4,16 +4,14 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const HOME_PATH = "/";
-const MUSIC_PATH = "/music";
-const CONTACT_PATH = "/contact";
-
 export default function NavBar() {
   const [scrolled] = useWindowScroll();
+  const { pathname } = useRouter();
   const [mobileMenu, toggleMobileMenu] = useToggle([false, true]);
 
+  const HOME_PATH = "/";
+
   function LinkItem({ path, name }: { path: string; name: string }) {
-    const { pathname } = useRouter();
     return (
       <li>
         <Link
@@ -33,8 +31,8 @@ export default function NavBar() {
   const menuItems = (
     <>
       <LinkItem path={HOME_PATH} name="Home" />
-      <LinkItem path={MUSIC_PATH} name="Music" />
-      <LinkItem path={CONTACT_PATH} name="Contact" />
+      <LinkItem path="/music" name="Music" />
+      <LinkItem path="/contact" name="Contact" />
     </>
   );
 
@@ -45,7 +43,7 @@ export default function NavBar() {
         scrolled.y && "bg-slate-900/50 backdrop-blur"
       )}
     >
-      <h1 className="font-logo text-2xl">
+      <h1 className="font-logo text-2xl decoration-4 underline-offset-4 transition-all hover:underline">
         <Link href={HOME_PATH}>801 AUDIO</Link>
       </h1>
 
