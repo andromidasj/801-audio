@@ -2,9 +2,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { songs } from "~/musicData";
 
-const findAsset = (name: string, type: "image" | "audio") => {
+const findAsset = (name: string, ext: ".jpg" | ".mp3" | ".ogg") => {
   const path = "/assets/music/";
-  const ext = type === "image" ? ".jpg" : ".mp3";
   return path + name.replaceAll(" ", "-").toLowerCase() + ext;
 };
 
@@ -28,7 +27,7 @@ export default function MusicSection({ n }: { n?: number }) {
           className="m-auto flex w-full flex-col overflow-clip rounded bg-[#F1F3F4] text-black transition-transform sm:h-44 sm:flex-row sm:hover:scale-[100.5%]"
         >
           <Image
-            src={findAsset(s.title, "image")}
+            src={findAsset(s.title, ".jpg")}
             alt={`${s.title} by ${s.artist}`}
             className="w-full sm:h-44 sm:w-44"
             height={360}
@@ -43,10 +42,13 @@ export default function MusicSection({ n }: { n?: number }) {
             <h4 className="italic">Involvement: {s.involvement.join(" • ")}</h4>
             <audio
               controls
-              src={findAsset(s.title, "audio")}
               className="mt-4 w-full sm:m-0"
               ref={(audio) => audio && (audio.onplay = () => handlePlay(audio))}
-            />
+            >
+              <source src={findAsset(s.title, ".ogg")} type="audio/ogg" />
+              <source src={findAsset(s.title, ".mp3")} type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
           </div>
         </div>
       ))}
