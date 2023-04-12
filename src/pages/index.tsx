@@ -3,9 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
-
-const VIDEO_ID = "kp3xrWf9zz8";
-const DEMO_REEL_URL = `https://www.youtube-nocookie.com/embed/${VIDEO_ID}?rel=0&enablejsapi=1`;
+import { DEMO_REEL_URL } from "~/consts";
 
 const Home: NextPage = () => {
   const musicRef = useRef<null | HTMLDivElement>(null);
