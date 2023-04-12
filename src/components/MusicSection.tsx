@@ -21,25 +21,29 @@ export default function MusicSection({ n }: { n?: number }) {
 
   return (
     <div className="grid w-full gap-8 md:grid-cols-1 lg:mx-0 lg:grid-cols-2">
-      {songs.slice(0, n).map((s) => (
+      {songs.slice(n).map((s) => (
         <div
           key={s.title}
-          className="m-auto flex w-full flex-col overflow-clip rounded bg-[#F1F3F4] text-black transition-transform sm:h-44 sm:flex-row sm:hover:scale-[100.5%]"
+          className="flex w-full flex-col overflow-clip rounded-sm text-slate-900 transition-transform sm:h-40 sm:flex-row sm:hover:scale-[101%]"
         >
           <Image
             src={findAsset(s.title, ".jpg")}
             alt={`${s.title} by ${s.artist}`}
-            className="w-full sm:h-44 sm:w-44"
-            height={360}
-            width={360}
+            className="w-full sm:h-40 sm:w-40"
+            height={180}
+            width={180}
             priority
           />
 
-          <div className="relative flex w-full flex-col justify-between p-4">
-            <h3 className="text-lg font-bold">
-              {s.title} • {s.artist}
-            </h3>
-            <h4 className="italic">Involvement: {s.involvement.join(" • ")}</h4>
+          <div className="relative flex w-full flex-col justify-between bg-[#F1F3F4] p-4">
+            <div className="flex flex-col gap-2">
+              <h3 className="text-lg font-bold">
+                {s.title} • {s.artist}
+              </h3>
+              <h4 className="italic text-slate-700">
+                Involvement: {s.involvement.join(" • ")}
+              </h4>
+            </div>
             <audio
               controls
               className="mt-4 w-full sm:m-0"

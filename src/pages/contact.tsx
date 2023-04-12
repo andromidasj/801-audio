@@ -69,7 +69,6 @@ export default function Contact() {
           name="description"
           content="Contact page for 801 Audio by Parker Holt."
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="m-auto mt-16 flex max-w-xl flex-col gap-8">
@@ -78,7 +77,7 @@ export default function Contact() {
         </h1>
 
         <form
-          className="m-auto flex w-full flex-col gap-4"
+          className="m-auto flex w-full flex-col gap-2"
           // eslint-disable-next-line @typescript-eslint/no-misused-promises
           onSubmit={handleSubmit(onSubmit)}
         >
