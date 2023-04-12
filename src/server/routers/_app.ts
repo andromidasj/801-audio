@@ -34,7 +34,8 @@ export const appRouter = router({
         html: `
           <h1>New message!</h1>
           <br />
-          <strong>New email from ${name} at ${email}</strong>
+          <p>New email from <strong>${name}</strong> at ${email}:</p>
+          <br />
           <br />
           <p>${message}</p>
         `,

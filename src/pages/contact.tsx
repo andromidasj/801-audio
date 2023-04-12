@@ -1,3 +1,9 @@
+import {
+  ArrowPathIcon,
+  CheckCircleIcon,
+  ExclamationCircleIcon,
+  PaperAirplaneIcon,
+} from "@heroicons/react/24/solid";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Head from "next/head";
 import { useForm } from "react-hook-form";
@@ -15,9 +21,6 @@ export const FormSchema = z.object({
 export type FormValues = z.infer<typeof FormSchema>;
 
 export default function Contact() {
-  const PHONE = "(801) 560-0983";
-  const EMAIL = "parker@801audio.com";
-
   const {
     register,
     handleSubmit,
@@ -40,9 +43,6 @@ export default function Contact() {
     isLoading,
     reset: mutationReset,
   } = trpc.email.useMutation({
-    onSuccess() {
-      console.log("Email sent!");
-    },
     onError() {
       console.log("Error sending email");
       setTimeout(() => {
@@ -53,19 +53,11 @@ export default function Contact() {
   });
 
   function onSubmit(data: FormValues) {
-    console.log("🚀 ~ onSubmit ~ data:", data);
-    const { email, message, name } = data;
-
     try {
       FormSchema.parse(data);
-      mutate({
-        email,
-        message,
-        name,
-      });
-      console.log("🚀 ~ onSubmit ~ data:", data);
+      mutate(data);
     } catch (error) {
-      console.log("🚀 ~ onSubmit ~ error:", error);
+      console.error(error);
     }
   }
 
@@ -73,7 +65,10 @@ export default function Contact() {
     <>
       <Head>
         <title>Contact | 801 Audio</title>
-        <meta name="description" content="801 Audio by Parker Holt" />
+        <meta
+          name="description"
+          content="Contact page for 801 Audio by Parker Holt."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -130,41 +125,50 @@ export default function Contact() {
 
           {isIdle && (
             <button
-              className="mt-4 rounded-sm bg-green-300 p-3 px-6 font-bold uppercase text-black hover:bg-green-400"
+              className="flex items-center justify-center gap-2 rounded-sm bg-green-300 p-3 px-6 font-bold uppercase text-black hover:bg-green-400"
               type="submit"
             >
-              Send Email
+              <PaperAirplaneIcon className="h-5 w-5" />
+              <span>Send Email</span>
             </button>
           )}
 
           {isLoading && (
             <button
-              className="mt-4 rounded-sm bg-green-300 p-3 px-6 font-bold uppercase text-black"
+              className="flex items-center justify-center gap-2 rounded-sm bg-green-300 p-3 px-6 font-bold uppercase text-black"
               disabled
             >
-              Sending...
+              <ArrowPathIcon className="h-6 w-6 animate-spin" />
+              <span>Sending...</span>
             </button>
           )}
 
           {isSuccess && (
             <>
-              <button
-                className="mt-4 rounded-sm bg-green-300 p-3 px-6 font-bold uppercase text-black"
-                disabled
-              >
-                Email sent!
-              </button>
-              <p className="text-slate-400">{`Thanks for reaching out! I'll send you an email as soon as I can. Can't wait to get in touch!`}</p>
+              <div className="flex items-center justify-center gap-2 rounded-sm p-3 px-6 text-xl font-bold uppercase text-green-300">
+                <CheckCircleIcon className="h-6 w-6" />
+                <span>Email sent!</span>
+              </div>
+              <div className="flex flex-col text-center text-slate-400">
+                <p>
+                  Thanks for reaching out! I will respond to your message as
+                  soon as possible.
+                </p>
+                <p>I am looking forward to connecting with you!</p>
+              </div>
             </>
           )}
 
           {isError && (
-            <button
-              className="mt-4 rounded-sm bg-red-400 p-3 px-6 font-bold uppercase text-black"
-              disabled
-            >
-              Error sending email
-            </button>
+            <>
+              <div className="flex items-center justify-center gap-2 rounded-sm p-3 px-6 font-bold uppercase text-red-400">
+                <ExclamationCircleIcon className="h-6 w-6" />
+                <span>Error sending email</span>
+              </div>
+              <p className="text-center text-slate-400">
+                Please refresh and try again.
+              </p>
+            </>
           )}
         </form>
       </div>
