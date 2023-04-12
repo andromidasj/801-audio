@@ -1,6 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="mt-12 mb-4 flex justify-center text-xs text-slate-400">
+    <footer className="mt-12 mb-4 flex justify-center gap-2 text-xs text-slate-400">
+      <p>Copyright © 2023 Parker Holt</p>
+      <p>•</p>
       <a
         href="https://github.com/andromidasj"
         target="_blank"
