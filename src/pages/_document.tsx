@@ -29,7 +29,7 @@ export default function Document() {
         />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0f172a" />
+        <meta name="theme-color" content="#0F172A" />
         <meta property="og:title" content="801 Audio" />
         <meta property="og:type" content="website" />
         <meta
