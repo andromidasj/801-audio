@@ -75,7 +75,7 @@ const Home: NextPage = () => {
           Demo Reel
         </h1>
 
-        <div className="relative m-auto w-full pb-[56.25%]">
+        <div className="relative m-auto w-full overflow-clip rounded border-2 border-green-300 pb-[56.25%]">
           <iframe
             className="absolute top-0 left-0 h-full w-full border-0"
             src={DEMO_REEL_URL}
