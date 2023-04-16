@@ -21,6 +21,12 @@ const Home: NextPage = () => {
         layers={[
           { image: "/assets/hero-mic.jpeg", speed: -20 },
           {
+            speed: 0,
+            children: (
+              <div className="absolute bottom-0 h-24 w-full bg-gradient-to-t from-slate-900" />
+            ),
+          },
+          {
             speed: -3,
             children: (
               <div className="relative mt-10 flex h-full flex-col items-center justify-between gap-12 px-4 py-20 pb-52 sm:mt-0 sm:bg-fixed sm:py-40 lg:bg-bottom">
@@ -63,19 +69,21 @@ const Home: NextPage = () => {
 
       <div
         ref={musicRef}
-        className="flex flex-col items-center gap-14 bg-slate-900 px-8"
+        className="m-auto flex max-w-7xl flex-col items-center gap-14 px-4"
       >
         <h1 className="mt-10 text-center font-header text-5xl uppercase text-white underline decoration-green-300 underline-offset-8 sm:text-6xl">
           Demo Reel
         </h1>
 
-        <iframe
-          className="aspect-video w-full sm:max-w-7xl sm:px-10"
-          src={DEMO_REEL_URL}
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        />
+        <div className="relative m-auto w-full pb-[56.25%]">
+          <iframe
+            className="absolute top-0 left-0 h-full w-full border-0"
+            src={DEMO_REEL_URL}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
       </div>
     </>
   );
