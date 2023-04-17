@@ -71,7 +71,7 @@ export default function Contact() {
         />
       </Head>
 
-      <div className="m-auto mt-16 flex max-w-xl flex-col gap-8">
+      <div className="m-auto mt-16 flex max-w-xl flex-col gap-8 p-8">
         <h1 className="mt-10 text-center font-header text-5xl uppercase text-white underline decoration-green-300 underline-offset-8 sm:text-6xl">
           Contact
         </h1>
