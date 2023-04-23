@@ -2,31 +2,31 @@ export const songs = [
   {
     title: "In the Meantime",
     artist: "Josh Andromidas",
-    involvement: ["Recorded Background Vocals", "Mixed"],
+    involvement: ["Background Vocals Studio Engineer", "Mix Engineer"],
   },
   {
     title: "Alright",
     artist: "Braydon Manley",
-    involvement: ["Mixed"],
+    involvement: ["Mix Engineer"],
   },
   {
     title: "Sleeper",
     artist: "Josh Andromidas",
-    involvement: ["Recorded Vocals", "Mixed"],
+    involvement: ["Vocal Studio Engineer", "Mix Engineer"],
   },
   {
     title: "Tell Her You Love Her",
     artist: "Rachel Reynolds",
-    involvement: ["Recorded Vocals", "Mixed", "Produced"],
+    involvement: ["Vocal Studio Engineer", "Mix Engineer", "Producer"],
   },
   {
     title: "Ruin Me",
     artist: "Rachel Reynolds",
-    involvement: ["Mixed"],
+    involvement: ["Mix Engineer"],
   },
   {
     title: "Hallelujah",
     artist: "Parker Holt",
-    involvement: ["Recorded", "Mixed"],
+    involvement: ["Recording Studio Engineer", "Mix Engineer"],
   },
 ];
