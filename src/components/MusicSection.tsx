@@ -40,9 +40,9 @@ export default function MusicSection({ n }: { n?: number }) {
               <h3 className="text-lg font-bold">
                 {s.title} • {s.artist}
               </h3>
-              <h4 className="italic text-slate-700">
-                Involvement: {s.involvement.join(" • ")}
-              </h4>
+              <div className="ml-4 flex gap-2 text-slate-700">
+                {s.involvement.join(" • ")}
+              </div>
             </div>
             <audio
               controls
