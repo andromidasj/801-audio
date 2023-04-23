@@ -79,7 +79,7 @@ const Home: NextPage = () => {
           <iframe
             className="absolute top-0 left-0 h-full w-full border-0"
             src={DEMO_REEL_URL}
-            title="YouTube video player"
+            title="801 Audio Demo Reel"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
