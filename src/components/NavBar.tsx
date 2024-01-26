@@ -32,6 +32,7 @@ export default function NavBar() {
     <>
       <LinkItem path={HOME_PATH} name="Home" />
       <LinkItem path="/music" name="Music" />
+      <LinkItem path="/downloads" name="Downloads" />
       <LinkItem path="/contact" name="Contact" />
     </>
   );
