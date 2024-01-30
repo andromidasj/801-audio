@@ -51,7 +51,7 @@ export default async function DirectorySearch({ path }: { path: [string] }) {
         {files.map((file) => (
           <div key={file} className="flex flex-col gap-2">
             <a
-              href={`${dirPathRelative}/${file}`}
+              href={`${dirPathRelative}/${file.replace(".ogg", ".aac")}`}
               download
               className="flex cursor-pointer items-center gap-2 hover:text-green-300"
             >
