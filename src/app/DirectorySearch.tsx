@@ -42,7 +42,7 @@ export default async function DirectorySearch({ path }: { path: [string] }) {
         {directories.map((directory) => (
           <Folder
             key={directory}
-            name={directory}
+            name={hyphenatedToCapitalized(directory)}
             path={`/downloads/${path.join("/")}/${directory}`}
           />
         ))}
@@ -55,7 +55,7 @@ export default async function DirectorySearch({ path }: { path: [string] }) {
               download
               className="flex cursor-pointer items-center gap-2 hover:text-green-300"
             >
-              {file.split(".aac")[0]?.replaceAll("-", " ")}
+              {hyphenatedToCapitalized(file.split(".aac")[0])}
               <IconCircleArrowDown />
             </a>
             <audio controls>
@@ -66,5 +66,14 @@ export default async function DirectorySearch({ path }: { path: [string] }) {
         ))}
       </div>
     </>
+  );
+}
+
+function hyphenatedToCapitalized(string?: string): string {
+  return (
+    string
+      ?.split("-")
+      .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ") || ""
   );
 }
