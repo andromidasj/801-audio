@@ -10,7 +10,7 @@ export default function Page() {
         Select a folder to view its contents
       </h2>
 
-      <div className="grid w-full grid-cols-3">
+      <div className="grid w-full grid-cols-3 gap-4">
         <Folder name="Band Bash" path="band-bash" topLevel />
         <Folder name="Christmas Concert" path="christmas-concerts" topLevel />
         <Folder
