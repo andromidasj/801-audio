@@ -20,7 +20,7 @@ export default async function DirectorySearch({ path }: { path: [string] }) {
 
       if (stat.isDirectory()) {
         directories.push(item);
-      } else if (stat.isFile() && item.endsWith(".ogg")) {
+      } else if (stat.isFile() && item.endsWith(".aac")) {
         files.push(item);
       }
     }
@@ -51,15 +51,15 @@ export default async function DirectorySearch({ path }: { path: [string] }) {
         {files.map((file) => (
           <div key={file} className="flex flex-col gap-2">
             <a
-              href={`${dirPathRelative}/${file.replace(".ogg", ".aac")}`}
+              href={`${dirPathRelative}/${file}`}
               download
               className="flex cursor-pointer items-center gap-2 hover:text-green-300"
             >
-              {file.split(".ogg")[0]?.replaceAll("-", " ")}
+              {file.split(".aac")[0]?.replaceAll("-", " ")}
               <IconCircleArrowDown />
             </a>
             <audio controls>
-              <source src={`${dirPathRelative}/${file}`} type="audio/ogg" />
+              <source src={`${dirPathRelative}/${file}`} type="audio/mp4" />
               Your browser does not support the audio element.
             </audio>
           </div>
