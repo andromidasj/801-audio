@@ -1,12 +1,14 @@
+"use client";
+
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useToggle, useWindowScroll } from "@mantine/hooks";
 import clsx from "clsx";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 export default function NavBar() {
   const [scrolled] = useWindowScroll();
-  const { pathname } = useRouter();
+  const pathname = usePathname();
   const [mobileMenu, toggleMobileMenu] = useToggle([false, true]);
 
   const HOME_PATH = "/";
