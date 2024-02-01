@@ -1,8 +1,8 @@
-import { IconCircleArrowDown } from "@tabler/icons-react";
 import { promises as fs } from "fs";
 import { ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
 import Folder from "~/components/Folder";
+import AudioFiles from "./AudioFiles";
 
 export default async function DirectorySearch({ path }: { path: [string] }) {
   const directoryPath =
@@ -32,7 +32,7 @@ export default async function DirectorySearch({ path }: { path: [string] }) {
     <>
       <Link
         href={`/downloads/${path.slice(0, -1).join("/")}`}
-        className="mb-4 flex gap-1"
+        className="mb-4 flex gap-1 hover:text-green-300"
       >
         <ArrowLeftIcon />
         Back
@@ -48,22 +48,7 @@ export default async function DirectorySearch({ path }: { path: [string] }) {
         ))}
       </div>
       <div className="m-auto mt-16 flex max-w-xl flex-col gap-8 p-8 text-center">
-        {files.map((file) => (
-          <div key={file} className="flex flex-col gap-2">
-            <a
-              href={`${dirPathRelative}/${file}`}
-              download
-              className="flex cursor-pointer items-center gap-2 hover:text-green-300"
-            >
-              {hyphenatedToCapitalized(file.split(".aac")[0])}
-              <IconCircleArrowDown />
-            </a>
-            <audio controls>
-              <source src={`${dirPathRelative}/${file}`} type="audio/mp4" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        ))}
+        <AudioFiles path={dirPathRelative} files={files} />
       </div>
     </>
   );
@@ -74,6 +59,7 @@ function hyphenatedToCapitalized(string?: string): string {
     string
       ?.split("-")
       .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ") || ""
+      .join(" ")
+      .replaceAll("_", "'") || ""
   );
 }
