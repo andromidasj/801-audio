@@ -85,7 +85,7 @@ export default function Contact() {
               Name
             </label>
             <input
-              className="rounded-sm bg-slate-50 py-2 px-3 text-lg text-black"
+              className="rounded-sm bg-slate-50 px-3 py-2 text-lg text-black"
               placeholder="John Doe"
               type="text"
               id="name"
@@ -99,7 +99,7 @@ export default function Contact() {
               Email Address
             </label>
             <input
-              className="rounded-sm bg-slate-50 py-2 px-3 text-lg text-black"
+              className="rounded-sm bg-slate-50 px-3 py-2 text-lg text-black"
               placeholder="johndoe@email.com"
               type="email"
               id="email"
@@ -113,7 +113,7 @@ export default function Contact() {
               Message
             </label>
             <textarea
-              className="rounded-sm bg-slate-50 py-2 px-3 text-lg text-black"
+              className="rounded-sm bg-slate-50 px-3 py-2 text-lg text-black"
               placeholder="Hi, I'm interested in..."
               id="message"
               {...register("message")}
@@ -123,7 +123,7 @@ export default function Contact() {
 
           {isIdle && (
             <button
-              className="flex items-center justify-center gap-2 rounded-sm bg-green-300 p-3 px-6 font-bold uppercase text-black hover:bg-green-400"
+              className="mt-4 flex items-center justify-center gap-2 rounded-sm bg-green-300 p-3 px-6 font-bold uppercase text-black hover:bg-green-400"
               type="submit"
             >
               <PaperAirplaneIcon className="h-5 w-5" />

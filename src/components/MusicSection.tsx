@@ -31,11 +31,11 @@ export default function MusicSection({ n }: { n?: number }) {
           />
 
           <div className="relative flex w-full flex-col justify-between bg-[#F1F3F4] p-4">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 text-center sm:text-start">
               <h3 className="text-lg font-bold">
                 {title} • {artist}
               </h3>
-              <div className="ml-4 flex gap-2 text-slate-700">
+              <div className="flex justify-center gap-2 text-slate-700 sm:justify-start">
                 {involvement.join(" • ")}
               </div>
             </div>
