@@ -2,8 +2,6 @@ import Head from "next/head";
 import { ParallaxBanner } from "react-scroll-parallax";
 import MusicSection from "~/components/MusicSection";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-
 export default function Portfolio() {
   return (
     <>
