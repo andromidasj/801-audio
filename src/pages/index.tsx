@@ -37,11 +37,11 @@ const Home: NextPage = () => {
 
                   <h2 className="text-center font-header text-4xl uppercase text-white drop-shadow-lg sm:text-5xl md:text-6xl">
                     Where{" "}
-                    <span className="bg-gradient-to-bl from-green-200 to-green-300 bg-clip-text text-transparent">
+                    <span className="bg-green-500 bg-gradient-to-bl from-green-200 to-green-300 bg-clip-text text-transparent">
                       quality
                     </span>{" "}
                     meets{" "}
-                    <span className="bg-gradient-to-br from-green-200 to-green-300 bg-clip-text text-transparent">
+                    <span className="bg-green-500 bg-gradient-to-br from-green-200 to-green-300 bg-clip-text text-transparent">
                       creativity
                     </span>
                   </h2>
@@ -77,7 +77,7 @@ const Home: NextPage = () => {
 
         <div className="relative m-auto w-full overflow-clip rounded-md border-2 border-green-300 pb-[56.25%]">
           <iframe
-            className="absolute top-0 left-0 h-full w-full border-0"
+            className="absolute left-0 top-0 h-full w-full border-0"
             src={DEMO_REEL_URL}
             title="801 Audio Demo Reel"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
