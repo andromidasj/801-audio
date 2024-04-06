@@ -1,6 +1,8 @@
 "use client";
+
 import { IconCircleArrowDown } from "@tabler/icons-react";
 import { useEffect, useRef } from "react";
+import hyphenatedToCapitalized from "~/utils/hyphenatedToCapitalized";
 
 export default function AudioFiles({
   path,
@@ -46,15 +48,5 @@ export default function AudioFiles({
         </div>
       ))}
     </>
-  );
-}
-
-function hyphenatedToCapitalized(string?: string): string {
-  return (
-    string
-      ?.split("-")
-      .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ")
-      .replaceAll("_", "'") || ""
   );
 }

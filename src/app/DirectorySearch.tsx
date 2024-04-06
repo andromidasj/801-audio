@@ -2,6 +2,7 @@ import { promises as fs } from "fs";
 import { ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
 import Folder from "~/components/Folder";
+import hyphenatedToCapitalized from "~/utils/hyphenatedToCapitalized";
 import AudioFiles from "./AudioFiles";
 
 export default async function DirectorySearch({ path }: { path: [string] }) {
@@ -51,15 +52,5 @@ export default async function DirectorySearch({ path }: { path: [string] }) {
         <AudioFiles path={dirPathRelative} files={files} />
       </div>
     </>
-  );
-}
-
-function hyphenatedToCapitalized(string?: string): string {
-  return (
-    string
-      ?.split("-")
-      .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ")
-      .replaceAll("_", "'") || ""
   );
 }
