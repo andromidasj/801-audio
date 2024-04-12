@@ -21,7 +21,10 @@ export default async function DirectorySearch({ path }: { path: [string] }) {
 
       if (stat.isDirectory()) {
         directories.push(item);
-      } else if (stat.isFile() && item.endsWith(".aac")) {
+      } else if (
+        stat.isFile() &&
+        (item.endsWith(".aac") || item.endsWith(".mp3"))
+      ) {
         files.push(item);
       }
     }

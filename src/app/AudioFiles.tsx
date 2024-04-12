@@ -34,7 +34,7 @@ export default function AudioFiles({
             download
             className="flex cursor-pointer items-center gap-2 hover:text-green-300"
           >
-            {hyphenatedToCapitalized(file.split(".aac")[0])}
+            {hyphenatedToCapitalized(file.split(/\.mp3|\.aac/)[0])}
             <IconCircleArrowDown />
           </a>
           <audio
