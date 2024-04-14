@@ -6,16 +6,16 @@ import hyphenatedToCapitalized from "~/utils/hyphenatedToCapitalized";
 
 export default function AudioFiles({
   path,
-  files,
+  file,
 }: {
   path: string;
-  files: string[];
+  file: string;
 }) {
   const audioRefs = useRef<HTMLAudioElement[]>([]);
 
   useEffect(() => {
     audioRefs.current = audioRefs.current.slice(0, files.length);
-  }, [files]);
+  }, [file]);
 
   const handlePlay = (index: number) => {
     audioRefs.current.forEach((ref, i) => {
