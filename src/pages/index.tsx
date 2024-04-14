@@ -1,11 +1,10 @@
-import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { DEMO_REEL_URL } from "~/consts";
 
-const Home: NextPage = () => {
+export default function Page() {
   const musicRef = useRef<null | HTMLDivElement>(null);
 
   return (
@@ -87,6 +86,4 @@ const Home: NextPage = () => {
       </div>
     </>
   );
-};
-
-export default Home;
+}
