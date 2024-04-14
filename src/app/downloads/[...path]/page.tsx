@@ -1,5 +1,6 @@
-import DirectorySearch from "~/app/DirectorySearch";
+import SupabaseDownloadItem from "~/components/SupabaseDownloadItem";
 
 export default function Page({ params }: { params: { path: [string] } }) {
-  return <DirectorySearch path={params.path} />;
+  console.log("🚀 ~ Page ~ params:", params);
+  return <SupabaseDownloadItem path={params.path} />;
 }

@@ -26,27 +26,23 @@ export default function AudioFiles({
   };
 
   return (
-    <>
-      {files.map((file, index) => (
-        <div key={file} className="flex flex-col gap-2">
-          <a
-            href={`${path}/${file}`}
-            download
-            className="flex cursor-pointer items-center gap-2 hover:text-green-300"
-          >
-            {hyphenatedToCapitalized(file.split(/\.mp3|\.aac/)[0])}
-            <IconCircleArrowDown />
-          </a>
-          <audio
-            controls
-            ref={(el) => el && (audioRefs.current[index] = el)}
-            onPlay={() => handlePlay(index)}
-          >
-            <source src={`${path}/${file}`} type="audio/mp4" />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-      ))}
-    </>
+    <div key={file} className="flex flex-col gap-2">
+      <a
+        href={`${path}/${file}`}
+        download
+        className="flex cursor-pointer items-center gap-2 hover:text-green-300"
+      >
+        {hyphenatedToCapitalized(file.split(/\.mp3|\.aac/)[0])}
+        <IconCircleArrowDown />
+      </a>
+      <audio
+        controls
+        ref={(el) => el && (audioRefs.current[index] = el)}
+        onPlay={() => handlePlay(index)}
+      >
+        <source src={`${path}/${file}`} type="audio/mp4" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
   );
 }

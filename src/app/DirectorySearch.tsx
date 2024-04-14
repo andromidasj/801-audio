@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import { ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
-import Folder from "~/components/Folder";
+import SupabaseDownloadItem from "~/components/SupabaseDownloadItem";
 import hyphenatedToCapitalized from "~/utils/hyphenatedToCapitalized";
 import AudioFiles from "./AudioFiles";
 
@@ -44,7 +44,7 @@ export default async function DirectorySearch({ path }: { path: [string] }) {
 
       <div className="grid grid-cols-3 gap-6">
         {directories.map((directory) => (
-          <Folder
+          <SupabaseDownloadItem
             key={directory}
             name={hyphenatedToCapitalized(directory)}
             path={`/downloads/${path.join("/")}/${directory}`}
