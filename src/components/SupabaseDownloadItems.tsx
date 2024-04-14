@@ -1,9 +1,10 @@
 import { IconCircleArrowDown, IconFolder } from "@tabler/icons-react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { supabase } from "~/app/downloads/page";
+import React from "react";
 import { cn } from "~/lib/utils";
 import hyphenatedToCapitalized from "~/utils/hyphenatedToCapitalized";
+import { supabase } from "~/utils/storage";
 import AudioPlayer from "./AudioPlayer";
 import BackButton from "./BackButton";
 import {
@@ -26,7 +27,6 @@ export default async function SupabaseDownloadItems({
   if (path) urlPath.push(...path);
 
   const bucketItemUrl = path?.join("/");
-  console.log("🚀 ~ bucketItemUrl:", bucketItemUrl);
 
   const { data: folderItems } = await supabase.storage
     .from("downloads")
@@ -43,8 +43,8 @@ export default async function SupabaseDownloadItems({
           {urlPath.map((item, index, arr) => {
             const isLast = index === arr.length - 1;
             return (
-              <>
-                <BreadcrumbItem key={item}>
+              <React.Fragment key={item}>
+                <BreadcrumbItem key={`link-${item}`}>
                   {!isLast ? (
                     <BreadcrumbLink
                       href={`/${arr.slice(0, index + 1).join("/")}`}
@@ -58,7 +58,7 @@ export default async function SupabaseDownloadItems({
                   )}
                 </BreadcrumbItem>
                 {!isLast && <BreadcrumbSeparator />}
-              </>
+              </React.Fragment>
             );
           })}
         </BreadcrumbList>

@@ -1,8 +1,5 @@
-import { createClient } from "@supabase/supabase-js";
 import SupabaseDownloadItems from "~/components/SupabaseDownloadItems";
-import { env } from "~/env.js";
-
-export const supabase = createClient(env.DATABASE_URL, env.SUPABASE_API_KEY);
+import { supabase } from "~/utils/storage";
 
 export default async function Page() {
   const { data: supabaseDownloads } = await supabase.storage

@@ -1,8 +1,4 @@
 import { createClient } from "@supabase/supabase-js";
-import { env } from "~/env.js";
+import { env } from "~/env";
 
-const supabase = createClient(env.DATABASE_URL, env.SUPABASE_API_KEY);
-
-export const { data: supabaseDownloads } = await supabase.storage
-  .from("downloads")
-  .list();
+export const supabase = createClient(env.DATABASE_URL, env.SUPABASE_API_KEY);
