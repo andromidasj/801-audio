@@ -29,6 +29,7 @@ const config = {
         "hero-cheer": "url('/assets/hero-cheer.jpeg')",
         "hero-mic": "url('/assets/hero-mic.jpeg')",
         "hero-portfolio": "url('/assets/portfolio-banner.jpeg')",
+        "hero-downloads": "url('/assets/bg-downloads.jpeg')",
       },
       colors: {
         border: "hsl(var(--border))",

@@ -2,9 +2,9 @@
 
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useToggle, useWindowScroll } from "@mantine/hooks";
-import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { cn } from "~/lib/utils";
 
 export default function NavBar() {
   const [scrolled] = useWindowScroll();
@@ -17,9 +17,9 @@ export default function NavBar() {
     return (
       <li>
         <Link
-          className={clsx(
+          className={cn(
             "decoration-4 underline-offset-4 hover:underline",
-            pathname === path && "underline decoration-green-400"
+            pathname === path && "underline decoration-green-400",
           )}
           href={path}
           onClick={() => toggleMobileMenu(false)}
@@ -41,9 +41,9 @@ export default function NavBar() {
 
   return (
     <nav
-      className={clsx(
+      className={cn(
         "sticky top-0 z-50 mb-[-64px] flex w-full list-none items-center justify-between px-8 py-4 font-semibold uppercase text-white transition-colors",
-        scrolled.y && "bg-slate-900/50 backdrop-blur"
+        scrolled.y && "bg-slate-900/50 backdrop-blur",
       )}
     >
       <h1 className="font-logo text-2xl decoration-4 underline-offset-4 transition-all hover:underline">

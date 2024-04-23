@@ -6,7 +6,6 @@ import { cn } from "~/lib/utils";
 import hyphenatedToCapitalized from "~/utils/hyphenatedToCapitalized";
 import { supabase } from "~/utils/storage";
 import AudioPlayer from "./AudioPlayer";
-import BackButton from "./BackButton";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -36,7 +35,7 @@ export default async function SupabaseDownloadItems({
 
   return (
     <div>
-      <BackButton />
+      {/* <BackButton /> */}
 
       <Breadcrumb className="dark mb-4">
         <BreadcrumbList>
@@ -81,7 +80,7 @@ export default async function SupabaseDownloadItems({
                 href={["", ...urlPath, item.name].join("/")}
               >
                 <div className="flex w-full items-center gap-2">
-                  <IconFolder className="h-6 w-6" />
+                  <IconFolder className="size-6" />
                   {hyphenatedToCapitalized(item.name)}
                 </div>
                 <ArrowRight className="-translate-x-4 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />

@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 export default function BackButton() {
   const pathname = usePathname();
 
-  if (!pathname || pathname === "/downloads") return null;
+  if (!pathname || pathname === "/downloads") return <div className="h-8" />;
 
   return (
     <Link

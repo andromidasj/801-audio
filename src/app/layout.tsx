@@ -1,4 +1,5 @@
 import { Anton } from "next/font/google";
+import NavBar from "~/components/NavBar";
 import "~/styles/globals.css";
 
 const anton = Anton({
@@ -20,7 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={anton.variable}>
-      <body className="min-h-screen bg-slate-900 text-white">{children}</body>
+      <body className="min-h-screen bg-slate-900 text-white">
+        <NavBar />
+        <div className="mt-16">{children}</div>
+      </body>
     </html>
   );
 }
