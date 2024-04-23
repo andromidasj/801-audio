@@ -1,21 +1,8 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
 import { songs } from "~/musicData";
+import AudioPlayer from "./AudioPlayer";
 
 export default function MusicSection({ n }: { n?: number }) {
-  const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(
-    null,
-  );
-
-  const handlePlay = (audio: HTMLAudioElement) => {
-    if (currentAudio && currentAudio !== audio) {
-      currentAudio.pause();
-    }
-    setCurrentAudio(audio);
-  };
-
   return (
     <div className="grid w-full gap-8 md:grid-cols-1 lg:mx-0 lg:grid-cols-2">
       {songs.slice(n).map(({ title, artist, involvement, path }) => (
@@ -41,15 +28,7 @@ export default function MusicSection({ n }: { n?: number }) {
                 {involvement.join(" • ")}
               </div>
             </div>
-            <audio
-              controls
-              className="mt-4 w-full sm:m-0"
-              ref={(audio) => audio && (audio.onplay = () => handlePlay(audio))}
-            >
-              <source src={path + ".ogg"} type="audio/ogg" />
-              <source src={path + ".mp3"} type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
+            <AudioPlayer path={path} />
           </div>
         </div>
       ))}

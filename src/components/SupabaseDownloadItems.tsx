@@ -110,7 +110,7 @@ export default async function SupabaseDownloadItems({
                 {hyphenatedToCapitalized(item.name.split(/\.mp3|\.aac/)[0])}
                 <IconCircleArrowDown />
               </a>
-              <AudioPlayer streamUrl={streamUrl} />
+              <AudioPlayer path={streamUrl} external />
             </div>
           );
         })}
