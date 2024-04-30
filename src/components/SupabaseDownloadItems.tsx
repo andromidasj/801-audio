@@ -66,9 +66,7 @@ export default async function SupabaseDownloadItems({
       <div
         className={cn(
           "flex w-full flex-col rounded-lg",
-          containsDirectories
-            ? "divide-y border border-muted-foreground"
-            : "items-center",
+          containsDirectories && "divide-y border border-muted-foreground",
         )}
       >
         {folderItems?.map((item) => {
