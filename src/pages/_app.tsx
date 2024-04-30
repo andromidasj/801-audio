@@ -1,7 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import { type AppType } from "next/dist/shared/lib/utils";
-import { Anton } from "next/font/google";
-import { ParallaxProvider } from "react-scroll-parallax";
+import { Anton, Tilt_Warp } from "next/font/google";
 import Footer from "~/components/Footer";
 import NavBar from "~/components/NavBar";
 import { cn } from "~/lib/utils";
@@ -15,25 +14,31 @@ const anton = Anton({
   variable: "--font-anton",
 });
 
+const tiltWarp = Tilt_Warp({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-tilt-warp",
+});
+
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <>
-      <ParallaxProvider>
-        <div
-          className={cn(
-            anton.variable,
-            "flex min-h-screen flex-col justify-between",
-          )}
-        >
-          <div>
-            <NavBar />
-            <div className="m-auto">
-              <Component {...pageProps} />
-            </div>
+      <div
+        className={cn(
+          anton.variable,
+          tiltWarp.variable,
+          "flex min-h-screen flex-col justify-between",
+        )}
+      >
+        <div>
+          <NavBar />
+          <div className="m-auto">
+            <Component {...pageProps} />
           </div>
-          <Footer />
         </div>
-      </ParallaxProvider>
+        <Footer />
+      </div>
+
       <Analytics />
     </>
   );
