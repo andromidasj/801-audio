@@ -5,6 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <TitleBanner
         title="Downloads"
+        subtitle="Westlake Bands 2023-2024"
         className="bg-hero-downloads bg-center"
         overlay
       />

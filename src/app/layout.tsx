@@ -28,9 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${anton.variable} ${tiltWarp.variable}`}>
-      <body className="min-h-screen bg-slate-900 text-white">
+      <body className="flex min-h-screen flex-col bg-slate-900 text-white">
         <NavBar />
-        <div className="">{children}</div>
+        <div className="flex-1">{children}</div>
         <Footer />
       </body>
     </html>
