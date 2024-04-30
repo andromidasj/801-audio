@@ -14,7 +14,13 @@ const config = {
     },
     extend: {
       fontFamily: {
-        logo: ["Tilt Warp", "Tahoma", "Verdana", "sans-serif"],
+        logo: [
+          "var(--font-tilt-warp)",
+          "Tilt Warp",
+          "Tahoma",
+          "Verdana",
+          "sans-serif",
+        ],
         header: [
           "var(--font-anton)",
           "Anton",

@@ -9,6 +9,7 @@ export default function AudioPlayer({
 }) {
   return (
     <audio
+      className="w-full"
       controls
       onPlay={async (thisAudio) => {
         const audios = document.getElementsByTagName("audio");
