@@ -2,9 +2,9 @@
 
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useToggle, useWindowScroll } from "@mantine/hooks";
-import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { cn } from "~/lib/utils";
 
 export default function NavBar() {
   const [scrolled] = useWindowScroll();
@@ -17,9 +17,9 @@ export default function NavBar() {
     return (
       <li>
         <Link
-          className={clsx(
+          className={cn(
             "decoration-4 underline-offset-4 hover:underline",
-            pathname === path && "underline decoration-green-400"
+            pathname === path && "underline decoration-green-400",
           )}
           href={path}
           onClick={() => toggleMobileMenu(false)}
@@ -41,9 +41,9 @@ export default function NavBar() {
 
   return (
     <nav
-      className={clsx(
-        "sticky top-0 z-50 mb-[-64px] flex w-full list-none items-center justify-between px-8 py-4 font-semibold uppercase text-white transition-colors",
-        scrolled.y && "bg-slate-900/50 backdrop-blur"
+      className={cn(
+        "sticky top-0 z-50 -mb-16 flex w-full list-none items-center justify-between px-8 py-4 font-semibold uppercase text-white transition-colors",
+        scrolled.y && "bg-slate-900/50 backdrop-blur-lg",
       )}
     >
       <h1 className="font-logo text-2xl decoration-4 underline-offset-4 transition-all hover:underline">
@@ -52,18 +52,19 @@ export default function NavBar() {
 
       <button className="z-10 sm:hidden" onClick={() => toggleMobileMenu()}>
         {mobileMenu ? (
-          <XMarkIcon className="h-8 w-8" />
+          <XMarkIcon className="size-8" />
         ) : (
-          <Bars3Icon className="h-8 w-8" />
+          <Bars3Icon className="size-8" />
         )}
       </button>
 
       <ul className="hidden justify-end gap-8 sm:flex">{menuItems}</ul>
 
       <div
-        className={`absolute inset-0 flex h-screen w-screen flex-col items-center justify-center gap-16 bg-black text-2xl transition-opacity duration-300 sm:hidden ${
-          mobileMenu ? "opacity-100" : "invisible opacity-0"
-        }`}
+        className={cn(
+          "absolute inset-0 flex h-screen w-screen flex-col items-center justify-center gap-16 bg-black text-2xl transition-opacity duration-300 sm:hidden",
+          mobileMenu ? "opacity-100" : "invisible opacity-0",
+        )}
       >
         <h1 className="font-logo text-5xl">801 AUDIO</h1>
         {menuItems}

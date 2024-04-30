@@ -14,7 +14,13 @@ const config = {
     },
     extend: {
       fontFamily: {
-        logo: ["Tilt Warp", "Tahoma", "Verdana", "sans-serif"],
+        logo: [
+          "var(--font-tilt-warp)",
+          "Tilt Warp",
+          "Tahoma",
+          "Verdana",
+          "sans-serif",
+        ],
         header: [
           "var(--font-anton)",
           "Anton",
@@ -29,6 +35,7 @@ const config = {
         "hero-cheer": "url('/assets/hero-cheer.jpeg')",
         "hero-mic": "url('/assets/hero-mic.jpeg')",
         "hero-portfolio": "url('/assets/portfolio-banner.jpeg')",
+        "hero-downloads": "url('/assets/bg-downloads.jpeg')",
       },
       colors: {
         border: "hsl(var(--border))",

@@ -10,10 +10,5 @@ export default async function Page() {
     return <div>Error</div>;
   }
 
-  return (
-    <div className="flex flex-col gap-8">
-      <br />
-      <SupabaseDownloadItems />
-    </div>
-  );
+  return <SupabaseDownloadItems />;
 }
