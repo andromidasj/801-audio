@@ -43,3 +43,4 @@ yarn-error.log*
 
 *.wav
 *.m4a
+.git.bfg-report
