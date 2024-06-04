@@ -5,7 +5,7 @@ https://801audio.com
 This website was made using the [T3 Stack](https://create.t3.gg/). Technologies used:
 - Typescript
 - NextJS
--vTailwind
+- Tailwind
 - tRPC
 - [Nodemailer](https://nodemailer.com/)
 - [React Hook Form](https://react-hook-form.com/)
